@@ -26,5 +26,14 @@ $(document).ready(function(){
 	        menu.removeAttr('style');
 	    }
 	});
+
+	// Вызов слайдера owl-carousel
+	$("#top-slider").owlCarousel({
+		singleItem: true,
+		navigation: true,
+		theme: "top-slider-theme",
+		navigationText: ['', ''],
+		slideSpeed: 600
+	});
 	
 });
