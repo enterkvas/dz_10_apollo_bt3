@@ -78,18 +78,62 @@ body {
   line-height: 38px;
   font-weight: 700;
   margin-top: 0px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
+  position: relative;
 }
 @media (min-width: 1200px) {
   .heading {
     font-size: 38px;
     line-height: 48px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
 }
+.heading--smaller-margin {
+  margin-bottom: 20px;
+}
+.heading--number:before {
+  height: 26px;
+  width: 26px;
+  display: block;
+  -webkit-border-radius: 13px;
+  border-radius: 13px;
+  background-color: #fac40a;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  padding-top: 3px;
+  padding-left: 9px;
+  position: absolute;
+  left: -13px;
+  top: -38px;
+  content: "0";
+}
+@media (min-width: 1200px) {
+  .heading--number:before {
+    left: -32px;
+    top: -16px;
+  }
+}
+.heading--number-1:before {
+  content: "1";
+}
+.heading--number-2:before {
+  content: "2";
+}
 .section {
-  margin-top: 60px;
-  margin-bottom: 67px;
+  padding-top: 60px;
+  padding-bottom: 67px;
+}
+.section--p-t-0 {
+  padding-top: 0;
+}
+.section--p-t-70 {
+  padding-top: 70px;
+}
+@media (min-width: 992px) {
+  .section--m-p-b-0 {
+    padding-bottom: 0px;
+  }
 }
 .block {
   background: #FFDB4C;
@@ -436,4 +480,21 @@ body {
   line-height: 24px;
   color: #777;
   margin-bottom: 20px;
+}
+.service-description__content {
+  font-size: 14px;
+  line-height: 24px;
+  color: #777;
+}
+.service-description__content p {
+  margin-top: 0px;
+  margin-bottom: 22px;
+}
+.service-description__button-arrow {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-image: url("../img/icons/arrow-orange.png");
+  background-repeat: no-repeat;
+  background-position: left top;
 }
