@@ -1,0 +1,41 @@
+.section {
+	// How we work
+	padding-top: 60px;
+	padding-bottom: 67px;
+	// Freelance hosting xs
+	&--p-40-50 {		
+		padding-top: 40px;
+		padding-bottom: 50px;				
+	}
+	// Startup hosting xs
+	&--p-50-50 {
+			padding-top: 50px;
+			padding-bottom: 50px;				
+		}
+
+	@media (min-width: 768px) {
+		// Freelance hosting sm & md		
+		&--p-80-50 {
+			padding-top: 80px;
+			padding-bottom: 50px;
+		}
+		// Startup hosting xs & sm & md
+		&--p-50-50 {
+			padding-top: 50px;
+			padding-bottom: 50px;				
+		}				
+	}
+	
+	@media (min-width: 1200px) {
+		// Freelance hosting lg		
+		&--p-b-70 {
+			padding-top: 70px;
+			padding-bottom: 0px;
+		}
+		// Startup hosting lg
+		&--p-70-35 {
+			padding-top: 70px;
+			padding-bottom: 35px;				
+		}
+	}
+}

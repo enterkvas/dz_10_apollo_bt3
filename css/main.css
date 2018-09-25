@@ -73,68 +73,6 @@ body {
   /* 10px * 1.6 = 16px */
   font-family: 'Noto Sans';
 }
-.heading {
-  font-size: 28px;
-  line-height: 38px;
-  font-weight: 700;
-  margin-top: 0px;
-  margin-bottom: 30px;
-  position: relative;
-}
-@media (min-width: 1200px) {
-  .heading {
-    font-size: 38px;
-    line-height: 48px;
-    margin-bottom: 40px;
-  }
-}
-.heading--smaller-margin {
-  margin-bottom: 20px;
-}
-.heading--number:before {
-  height: 26px;
-  width: 26px;
-  display: block;
-  -webkit-border-radius: 13px;
-  border-radius: 13px;
-  background-color: #fac40a;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 700;
-  padding-top: 3px;
-  padding-left: 9px;
-  position: absolute;
-  left: -13px;
-  top: -38px;
-  content: "0";
-}
-@media (min-width: 1200px) {
-  .heading--number:before {
-    left: -32px;
-    top: -16px;
-  }
-}
-.heading--number-1:before {
-  content: "1";
-}
-.heading--number-2:before {
-  content: "2";
-}
-.section {
-  padding-top: 60px;
-  padding-bottom: 67px;
-}
-.section--p-t-0 {
-  padding-top: 0;
-}
-.section--p-t-70 {
-  padding-top: 70px;
-}
-@media (min-width: 992px) {
-  .section--m-p-b-0 {
-    padding-bottom: 0px;
-  }
-}
 .block {
   background: #FFDB4C;
   margin-top: 30px;
@@ -157,6 +95,108 @@ body {
 /* Small Devices, Tablets - adaptive styles bofore 768px */
 /* Extra Small Devices, Phones - adaptive styles bofore 480px */
 /* Custom, iPhone Retina - adaptive styles bofore 320px */
+.heading {
+  font-size: 28px;
+  line-height: 38px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-top: 0px;
+  margin-bottom: 30px;
+  position: relative;
+}
+.heading--m-7-15 {
+  margin-top: 7px;
+  margin-bottom: 15px;
+}
+.heading--m-35-15 {
+  margin-top: 35px;
+  margin-bottom: 15px;
+}
+@media (min-width: 768px) {
+  .heading--m-t-8- {
+    margin-top: -8px;
+  }
+  .heading--m-20-16 {
+    margin-top: 20px;
+    margin-bottom: 16px;
+  }
+}
+@media (min-width: 1200px) {
+  .heading {
+    font-size: 38px;
+    line-height: 48px;
+  }
+  .heading--m-20-20 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .heading--m-17-21 {
+    margin-top: 17px;
+    margin-bottom: 21px;
+  }
+}
+.heading--number:before {
+  height: 26px;
+  width: 26px;
+  display: block;
+  -webkit-border-radius: 13px;
+  border-radius: 13px;
+  background-color: #ffc80a;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  padding-top: 5px;
+  padding-left: 8px;
+  position: absolute;
+  left: -12px;
+  top: -40px;
+  content: "0";
+}
+@media (min-width: 1200px) {
+  .heading--number:before {
+    left: -32px;
+    top: -16px;
+  }
+}
+.heading--number-1:before {
+  content: "1";
+}
+.heading--number-2:before {
+  content: "2";
+}
+.section {
+  padding-top: 60px;
+  padding-bottom: 67px;
+}
+.section--p-40-50 {
+  padding-top: 40px;
+  padding-bottom: 50px;
+}
+.section--p-50-50 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+@media (min-width: 768px) {
+  .section--p-80-50 {
+    padding-top: 80px;
+    padding-bottom: 50px;
+  }
+  .section--p-50-50 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+@media (min-width: 1200px) {
+  .section--p-b-70 {
+    padding-top: 70px;
+    padding-bottom: 0px;
+  }
+  .section--p-70-35 {
+    padding-top: 70px;
+    padding-bottom: 35px;
+  }
+}
 .logo {
   text-align: center;
   padding-top: 30px;
@@ -497,4 +537,15 @@ body {
   background-image: url("../img/icons/arrow-orange.png");
   background-repeat: no-repeat;
   background-position: left top;
+  margin-top: -8px;
+}
+@media (min-width: 768px) {
+  .service-description__button-arrow {
+    margin-top: 2px;
+  }
+}
+@media (min-width: 1200px) {
+  .service-description__button-arrow {
+    margin-top: 22px;
+  }
 }
