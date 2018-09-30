@@ -156,7 +156,7 @@ body {
 @media (min-width: 1200px) {
   .heading--number:before {
     left: -32px;
-    top: -16px;
+    top: -18px;
   }
 }
 .heading--number-1:before {
@@ -188,13 +188,13 @@ body {
   }
 }
 @media (min-width: 1200px) {
-  .section--p-b-70 {
+  .section--p-70-90 {
     padding-top: 70px;
-    padding-bottom: 0px;
+    padding-bottom: 90px;
   }
-  .section--p-70-35 {
+  .section--p-70-100 {
     padding-top: 70px;
-    padding-bottom: 35px;
+    padding-bottom: 100px;
   }
 }
 .logo {
@@ -520,6 +520,26 @@ body {
   line-height: 24px;
   color: #777;
   margin-bottom: 20px;
+}
+.service-description__img {
+  position: relative;
+}
+@media (min-width: 768px) {
+  .service-description__img-tablet {
+    right: 0px;
+  }
+}
+@media (min-width: 1200px) {
+  .service-description__img-tablet {
+    position: absolute;
+    right: 80px;
+  }
+}
+@media (min-width: 1200px) {
+  .service-description__img-rocket {
+    position: absolute;
+    left: 37px;
+  }
 }
 .service-description__content {
   font-size: 14px;
