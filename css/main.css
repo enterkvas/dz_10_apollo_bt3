@@ -104,17 +104,18 @@ body {
   margin-bottom: 30px;
   position: relative;
 }
-.heading--m-7-15 {
-  margin-top: 7px;
-  margin-bottom: 15px;
+.heading--m-8-17 {
+  margin-top: 8px;
+  margin-bottom: 17px;
 }
 .heading--m-35-15 {
   margin-top: 35px;
   margin-bottom: 15px;
 }
 @media (min-width: 768px) {
-  .heading--m-t-8- {
+  .heading--m-t-m8-16 {
     margin-top: -8px;
+    margin-bottom: 16px;
   }
   .heading--m-20-16 {
     margin-top: 20px;
@@ -150,7 +151,7 @@ body {
   padding-left: 8px;
   position: absolute;
   left: -12px;
-  top: -40px;
+  top: -39px;
   content: "0";
 }
 @media (min-width: 1200px) {
@@ -178,9 +179,9 @@ body {
   padding-bottom: 50px;
 }
 @media (min-width: 768px) {
-  .section--p-80-50 {
+  .section--p-80-51 {
     padding-top: 80px;
-    padding-bottom: 50px;
+    padding-bottom: 51px;
   }
   .section--p-50-50 {
     padding-top: 50px;
@@ -524,11 +525,6 @@ body {
 .service-description__img {
   position: relative;
 }
-@media (min-width: 768px) {
-  .service-description__img-tablet {
-    right: 0px;
-  }
-}
 @media (min-width: 1200px) {
   .service-description__img-tablet {
     position: absolute;
@@ -557,15 +553,15 @@ body {
   background-image: url("../img/icons/arrow-orange.png");
   background-repeat: no-repeat;
   background-position: left top;
-  margin-top: -8px;
+  margin-top: -7px;
 }
 @media (min-width: 768px) {
   .service-description__button-arrow {
-    margin-top: 2px;
+    margin-top: 23px;
   }
 }
 @media (min-width: 1200px) {
   .service-description__button-arrow {
-    margin-top: 22px;
+    margin-top: 2px;
   }
 }
