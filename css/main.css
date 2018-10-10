@@ -73,6 +73,11 @@ body {
   /* 10px * 1.6 = 16px */
   font-family: 'Noto Sans';
 }
+p {
+  font-size: 14px;
+  line-height: 24px;
+  color: #777;
+}
 .block {
   background: #FFDB4C;
   margin-top: 30px;
@@ -112,6 +117,9 @@ body {
   margin-top: 35px;
   margin-bottom: 15px;
 }
+.heading--m-b-11 {
+  margin-bottom: 11px;
+}
 @media (min-width: 768px) {
   .heading--m-t-m8-16 {
     margin-top: -8px;
@@ -126,6 +134,9 @@ body {
   .heading {
     font-size: 38px;
     line-height: 48px;
+  }
+  .heading--smaller-margin {
+    margin-bottom: 20px;
   }
   .heading--m-20-20 {
     margin-top: 20px;
@@ -564,4 +575,7 @@ body {
   .service-description__button-arrow {
     margin-top: 2px;
   }
+}
+.price__head {
+  padding: 35px 5px 50px;
 }
