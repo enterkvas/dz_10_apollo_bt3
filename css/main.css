@@ -78,6 +78,15 @@ p {
   line-height: 24px;
   color: #777;
 }
+.subtitle_text {
+  font-size: 14px;
+  line-height: 24px;
+  color: #777;
+  margin-top: 0;
+  margin-bottom: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
 .block {
   background: #FFDB4C;
   margin-top: 30px;
@@ -108,43 +117,18 @@ p {
   margin-top: 0px;
   margin-bottom: 30px;
   position: relative;
+  /* Prices */
 }
-.heading--m-8-17 {
-  margin-top: 8px;
-  margin-bottom: 17px;
-}
-.heading--m-35-15 {
-  margin-top: 35px;
-  margin-bottom: 15px;
-}
-.heading--m-b-11 {
-  margin-bottom: 11px;
-}
-@media (min-width: 768px) {
-  .heading--m-t-m8-16 {
-    margin-top: -8px;
-    margin-bottom: 16px;
-  }
-  .heading--m-20-16 {
-    margin-top: 20px;
-    margin-bottom: 16px;
-  }
+.heading--m-b-9 {
+  margin-bottom: 9px;
 }
 @media (min-width: 1200px) {
   .heading {
     font-size: 38px;
-    line-height: 48px;
+    margin-bottom: 40px;
   }
   .heading--smaller-margin {
-    margin-bottom: 20px;
-  }
-  .heading--m-20-20 {
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-  .heading--m-17-21 {
-    margin-top: 17px;
-    margin-bottom: 21px;
+    margin-bottom: 27px;
   }
 }
 .heading--number:before {
@@ -180,6 +164,7 @@ p {
 .section {
   padding-top: 60px;
   padding-bottom: 67px;
+  /* Prices */
 }
 .section--p-40-50 {
   padding-top: 40px;
@@ -187,6 +172,10 @@ p {
 }
 .section--p-50-50 {
   padding-top: 50px;
+  padding-bottom: 50px;
+}
+.section--p-29-50 {
+  padding-top: 29px;
   padding-bottom: 50px;
 }
 @media (min-width: 768px) {
@@ -200,6 +189,9 @@ p {
   }
 }
 @media (min-width: 1200px) {
+  .section {
+    /* Prices */
+  }
   .section--p-70-90 {
     padding-top: 70px;
     padding-bottom: 90px;
@@ -208,6 +200,111 @@ p {
     padding-top: 70px;
     padding-bottom: 100px;
   }
+  .section--pb-90 {
+    padding-bottom: 90px;
+  }
+}
+.package {
+  text-align: center;
+  padding-top: 31px;
+  padding-bottom: 47px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border-radius: 7px;
+  background-color: #ffffff;
+  box-shadow: 0px 10px 40px 0px rgba(99, 117, 138, 0.3);
+  margin-bottom: 40px;
+}
+.package.last {
+  margin-bottom: 0;
+}
+@media (min-width: 768px) {
+  .package {
+    margin-bottom: 0;
+  }
+}
+.package__type {
+  font-size: 12px;
+  color: #242526;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  letter-spacing: 0.9px;
+}
+.package__price {
+  line-height: 1;
+  font-size: 48px;
+  font-weight: 700;
+  color: #242526;
+  margin-bottom: 13px;
+}
+.package__price:after {
+  content: "c";
+  font-family: 'als_rublregular';
+}
+.package__period {
+  font-size: 12px;
+  color: #242526;
+  margin-bottom: 44px;
+  letter-spacing: 0.3px;
+}
+.package__benefits {
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 44px;
+}
+.package__benefits ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.package__benefits ul li {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 9px;
+  line-height: 20px;
+}
+.package__benefits ul li:before {
+  display: inline-block;
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-image: url("../img/icons/ok-icon.png");
+  background-position: left 2px;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+}
+.button {
+  background-color: #252525;
+  box-shadow: 0px 8px 16px 0px #ababab;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  -webkit-border-radius: 22px;
+  border-radius: 22px;
+  letter-spacing: 0.8px;
+  line-height: 1;
+  display: inline-block;
+  padding: 14px 44px;
+  cursor: pointer;
+}
+.button:hover,
+.button:active,
+.button:focus {
+  background-color: #FFC80A;
+  color: #fff;
+  text-decoration: none;
+}
+.button--orange {
+  background-color: #FFC80A;
+  padding: 14px 28px;
+}
+.button--orange:hover,
+.button--orange:active,
+.button--orange:focus {
+  background-color: #FFE400;
+  color: #000;
+  text-decoration: none;
 }
 .logo {
   text-align: center;
@@ -575,7 +672,4 @@ p {
   .service-description__button-arrow {
     margin-top: 2px;
   }
-}
-.price__head {
-  padding: 35px 5px 50px;
 }
