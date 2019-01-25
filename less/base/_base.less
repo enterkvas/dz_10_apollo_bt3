@@ -1,6 +1,6 @@
 html, body {
 	height: 100%;
-	min-width: 310px;
+	min-width: 310px;	
 }
 
 html {
@@ -13,10 +13,19 @@ body {
 	font-family: 'Noto Sans';
 }
 
-p {
+p {	
+	margin: 0;
+	padding: 0;
+	padding-left: 10px;
+	padding-right: 10px;
 	font-size: 14px;
 	line-height: 24px;
-	color: #777;
+	color: #777;	
+}
+
+h1, h2, h3, .h1, .h2, .h3 {
+	margin: 0;
+	padding: 0;
 }
 
 .subtitle_text {
@@ -24,9 +33,22 @@ p {
 	line-height: 24px;
 	color: #777;
 	margin-top: 0;
-	margin-bottom: 40px;
+	margin-bottom: 37px;
 	margin-left: 10px;
 	margin-right: 10px;
+	
+	@media (min-width: 768px) {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+	@media (min-width: 1200px) {
+		width: 80%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 53px;
+		padding-left: 0px;
+		padding-right: 0px;
+	}
 }
 
 .block {
@@ -44,9 +66,29 @@ p {
 	border-top: 1px solid #EAEFF5;
 }
 
-.footer {
-	background-color: #252525;
+/* -- Псевдоэлементы-отступы сверху для ссылок-якорей блока навигации -- */
+#freelance:before, #startup:before, #price:before, #footer:before {
+	display: block;
+	content: "";
+	height: 55px;
+	margin: -55px 0 0;
+	
+	// @media (min-width: 992px) {
+	// 	display: block;
+	// 	content: "";
+	// 	height: 0px;
+	// 	margin: 0px;
+	// }
+	
+	@media (min-width: 992px) {
+		display: block;
+		content: "";
+		height: 0px;
+		margin: 0px;
+	}	
 }
+
+					/* -- // Псевдоэлементы-отступы сверху для ссылок-якорей блока навигации -- */
 
 /*==========  Desktop First Method  ==========*/
 

@@ -14,31 +14,32 @@
 	display: none;
 	
 	@media (min-width: 768px) {
-		display: block;
+		display: block;	
+		position: absolute;
+		width: 72px;
+		height: 72px;
+		background-repeat: no-repeat; /*это св-во можно было не указывать */
+		background-position: left top; /*это св-во можно было не указывать */
+		/*font-size: 0;  можно было так сбросить текст внутри кнопок(1-й вариант). 2-й вариант сброса: в файле main.js установить св-во: navigationText: ['', ''] */
+		top: 50%;
+		margin-top: -36px;		
+		// color: #FFF;
+		// display: inline-block;
+		// zoom: 1;
+		// *display: inline;/*IE7 life-saver */
+		// margin: 5px;
+		// padding: 3px 10px;
+		// font-size: 12px;
+		// -webkit-border-radius: 30px;
+		// -moz-border-radius: 30px;
+		// border-radius: 30px;
+		// background: #869791;
+		// filter: Alpha(Opacity=50);/* IE7 fix */
+		// opacity: 0.5;
 	}
-	
-	position: absolute;
-	width: 72px;
-	height: 72px;
-	background-repeat: no-repeat; /*это св-во можно было не указывать */
-	background-position: left top; /*это св-во можно было не указывать */
-	/*font-size: 0;  можно было так сбросить текст внутри кнопок(1-й вариант). 2-й вариант сброса: в файле main.js установить св-во: navigationText: ['', ''] */
-	top: 50%;
-	margin-top: -36px;	
-	
-	// color: #FFF;
-	// display: inline-block;
-	// zoom: 1;
-	// *display: inline;/*IE7 life-saver */
-	// margin: 5px;
-	// padding: 3px 10px;
-	// font-size: 12px;
-	// -webkit-border-radius: 30px;
-	// -moz-border-radius: 30px;
-	// border-radius: 30px;
-	// background: #869791;
-	// filter: Alpha(Opacity=50);/* IE7 fix */
-	// opacity: 0.5;
+	@media (min-width: 1200px) {
+		margin-top: -47px;
+	}
 }
 /* Clickable class fix problem with hover on touch devices */
 /* Use it for non-touch hover action */
@@ -82,7 +83,11 @@
 	position: absolute;
 	bottom: 0;
 	width: 100%;
-	bottom: -62px;
+	bottom: -63px;
+	
+	@media (min-width: 768px) {
+		bottom: -72px;
+	}
 	
 	@media (min-width: 992px) {
 		display: none;

@@ -1,8 +1,19 @@
 	.service-description__img {
 		position: relative;
+		// max-width: 100%;
+		// height: auto;		
 	}
-		.service-description__img-tablet {			
 
+		.service-description__img--xs-m-b-34 {
+			margin-bottom: 34px;
+			
+			@media (min-width: 768px) {
+				margin-bottom: 0;				
+			}
+		}
+	
+		.service-description__img-tablet {				
+			
 			@media (min-width: 1200px) {
 				position: absolute;
 				right: 80px;				
@@ -24,7 +35,24 @@
 		p {
 			margin-top: 0px;
 			margin-bottom: 22px;
+			// padding-left: 10px;
+   //          padding-right: 10px;
 		}
+
+		@media (min-width: 768px) {
+			width: 350px;
+		}
+		@media(min-width: 1200px) {
+			width: 97%;
+			padding-left: 0;
+			padding-right: 0;
+			
+			p {
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
+
 	}
 
 	.service-description__button-arrow {
@@ -35,6 +63,7 @@
 		background-repeat: no-repeat;
 		background-position: left top;
 		margin-top: -7px;
+		margin-left: 10px;
 		
 		@media (min-width: 768px) {
 			margin-top: 23px;
@@ -42,5 +71,7 @@
 		
 		@media (min-width: 1200px) {
 			margin-top: 2px;
+			margin-left: 0;
+			margin-top: 26px;
 		}
 	}

@@ -74,18 +74,47 @@ body {
   font-family: 'Noto Sans';
 }
 p {
+  margin: 0;
+  padding: 0;
+  padding-left: 10px;
+  padding-right: 10px;
   font-size: 14px;
   line-height: 24px;
   color: #777;
+}
+h1,
+h2,
+h3,
+.h1,
+.h2,
+.h3 {
+  margin: 0;
+  padding: 0;
 }
 .subtitle_text {
   font-size: 14px;
   line-height: 24px;
   color: #777;
   margin-top: 0;
-  margin-bottom: 40px;
+  margin-bottom: 37px;
   margin-left: 10px;
   margin-right: 10px;
+}
+@media (min-width: 768px) {
+  .subtitle_text {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+@media (min-width: 1200px) {
+  .subtitle_text {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 53px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 }
 .block {
   background: #FFDB4C;
@@ -100,9 +129,28 @@ p {
 .line {
   border-top: 1px solid #EAEFF5;
 }
-.footer {
-  background-color: #252525;
+/* -- Псевдоэлементы-отступы сверху для ссылок-якорей блока навигации -- */
+#freelance:before,
+#startup:before,
+#price:before,
+#footer:before {
+  display: block;
+  content: "";
+  height: 55px;
+  margin: -55px 0 0;
 }
+@media (min-width: 992px) {
+  #freelance:before,
+  #startup:before,
+  #price:before,
+  #footer:before {
+    display: block;
+    content: "";
+    height: 0px;
+    margin: 0px;
+  }
+}
+/* -- // Псевдоэлементы-отступы сверху для ссылок-якорей блока навигации -- */
 /*==========  Desktop First Method  ==========*/
 /* Large Devices, Wide Screens - adaptive styles bofore 1200px */
 /* Medium Devices, Desktops - adaptive styles bofore 992px */
@@ -114,21 +162,49 @@ p {
   line-height: 38px;
   font-weight: 700;
   letter-spacing: -0.5px;
-  margin-top: 0px;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
+  padding-left: 10px;
+  padding-right: 10px;
   position: relative;
   /* Prices */
 }
-.heading--m-b-9 {
-  margin-bottom: 9px;
+.heading--m-b-15 {
+  margin-bottom: 15px;
 }
-@media (min-width: 1200px) {
+.heading--m-b-10 {
+  margin-bottom: 10px;
+}
+@media (min-width: 768px) {
+  .heading--m-m10-15 {
+    margin-top: -10px;
+    margin-bottom: 15px;
+  }
+  .heading--m-20-14 {
+    margin-top: 20px;
+    margin-bottom: 14px;
+  }
+}
+@media (min-width: 992px) {
   .heading {
     font-size: 38px;
+    margin-top: 10px;
     margin-bottom: 40px;
   }
   .heading--smaller-margin {
     margin-bottom: 27px;
+  }
+}
+@media (min-width: 1200px) {
+  .heading {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .heading--m-24-23 {
+    margin-top: 24px;
+    margin-bottom: 23px;
+  }
+  .heading--m-b-23 {
+    margin-bottom: 23px;
   }
 }
 .heading--number:before {
@@ -139,32 +215,34 @@ p {
   border-radius: 13px;
   background-color: #ffc80a;
   color: #fff;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
   line-height: 1;
-  padding-top: 5px;
-  padding-left: 8px;
   position: absolute;
-  left: -12px;
+  left: -7px;
   top: -39px;
   content: "0";
 }
 @media (min-width: 1200px) {
   .heading--number:before {
     left: -32px;
-    top: -18px;
+    top: -22px;
   }
 }
 .heading--number-1:before {
   content: "1";
+  padding-top: 5px;
+  padding-left: 8px;
 }
 .heading--number-2:before {
   content: "2";
+  padding-top: 5px;
+  padding-left: 9px;
 }
 .section {
-  padding-top: 60px;
-  padding-bottom: 67px;
-  /* Prices */
+  padding-top: 34px;
+  padding-bottom: 50px;
+  /* Prices xs */
 }
 .section--p-40-50 {
   padding-top: 40px;
@@ -178,41 +256,56 @@ p {
   padding-top: 29px;
   padding-bottom: 50px;
 }
+.section--p-36-35 {
+  padding-top: 36px;
+  padding-bottom: 35px;
+}
 @media (min-width: 768px) {
-  .section {
-    /* Footer */
+  .section--pb-60 {
+    padding-bottom: 60px;
   }
   .section--p-80-51 {
     padding-top: 80px;
     padding-bottom: 51px;
   }
-  .section--p-50-50 {
-    padding-top: 50px;
-    padding-bottom: 50px;
+  .section--p-33-100 {
+    padding-top: 33px;
+    padding-bottom: 100px;
   }
-   .section--p-b-102 {
-    padding-bottom: 102px;
+}
+@media (min-width: 992px) {
+  .section {
+    margin-top: 0;
   }
 }
 @media (min-width: 1200px) {
   .section {
     /* Prices */
   }
-  .section--p-70-90 {
+  .section--p-54-122 {
+    padding-top: 54px;
+    padding-bottom: 122px;
+  }
+  .section--p-70-87 {
     padding-top: 70px;
+    padding-bottom: 87px;
+  }
+  .section--p-82-97 {
+    padding-top: 82px;
+    padding-bottom: 97px;
+  }
+  .section--p-55-90 {
+    padding-top: 55px;
     padding-bottom: 90px;
   }
-  .section--p-70-100 {
-    padding-top: 70px;
-    padding-bottom: 100px;
-  }
-  .section--pb-90 {
-    padding-bottom: 90px;
+  .section--p-76-74 {
+    padding-top: 76px;
+    padding-bottom: 74px;
   }
 }
 .package {
   text-align: center;
-  padding-top: 31px;
+  padding-top: 32px;
   padding-bottom: 47px;
   padding-left: 25px;
   padding-right: 25px;
@@ -266,7 +359,7 @@ p {
 .package__benefits ul li {
   margin: 0;
   padding: 0;
-  margin-bottom: 9px;
+  margin-bottom: 10px;
   line-height: 20px;
 }
 .package__benefits ul li:before {
@@ -297,12 +390,12 @@ p {
 .button:hover,
 .button:active,
 .button:focus {
-  background-color: #FFC80A;
+  background-color: #ffc80a;
   color: #fff;
   text-decoration: none;
 }
 .button--orange {
-  background-color: #FFC80A;
+  background-color: #ffc80a;
   padding: 14px 28px;
 }
 .button--orange:hover,
@@ -312,37 +405,76 @@ p {
   color: #000;
   text-decoration: none;
 }
+.container--mobile-no-padding {
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+}
+@media (min-width: 992px) {
+  .container--mobile-no-padding {
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 970px;
+  }
+}
+@media (min-width: 1170px) {
+  .container--mobile-no-padding {
+    width: 1170px;
+  }
+}
 .logo {
   text-align: center;
-  padding-top: 30px;
-  padding-bottom: 40px;
+  padding-top: 70px;
+  padding-bottom: 38px;
   text-transform: uppercase;
+}
+@media (min-width: 768px) {
+  .logo {
+    padding-top: 60px;
+  }
+}
+@media (min-width: 992px) {
+  .logo {
+    padding-top: 16px;
+  }
+}
+@media (min-width: 1200px) {
+  .logo {
+    padding-bottom: 48px;
+  }
 }
 .logo__name {
   color: #000;
   font-size: 33px;
-  line-height: 1.5;
-  letter-spacing: 5.5px;
+  line-height: 1.35;
+  letter-spacing: 8.2px;
   font-weight: 700;
+  margin-top: 25px;
 }
 @media (min-width: 768px) {
   .logo__name {
+    margin-top: 34px;
+  }
+}
+@media (min-width: 1200px) {
+  .logo__name {
     font-size: 38px;
-    letter-spacing: 13px;
-    line-height: 1.75;
+    letter-spacing: 9.5px;
+    line-height: 1.5;
+    margin-top: 27px;
   }
 }
 .logo__slogan {
   color: #a1bbd9;
   font-size: 14px;
   line-height: 1;
-  letter-spacing: 7.3px;
+  letter-spacing: 9.0px;
   font-weight: 700;
 }
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   .logo__slogan {
     font-size: 16px;
-    letter-spacing: 12.5px;
+    letter-spacing: 10.3px;
   }
 }
 .navigation {
@@ -350,16 +482,21 @@ p {
   font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 4px;
   color: #fff;
   box-shadow: 0px 5px 10px 0px #2a496d;
   z-index: 1;
   position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 @media (min-width: 992px) {
   .navigation {
     padding-top: 23px;
     padding-bottom: 23px;
+    position: relative;
   }
 }
 .navigation ul {
@@ -373,7 +510,12 @@ p {
   .navigation ul {
     display: flex;
     justify-content: space-between;
-    background-color: #38383A;
+    background-color: transparent;
+  }
+}
+@media (min-width: 1200px) {
+  .navigation ul {
+    line-height: 1.52857143;
   }
 }
 .navigation ul li {
@@ -439,23 +581,6 @@ p {
 .navigation__toggle-button--active {
   background-color: #16385F;
 }
-.container--mobile--no-padding {
-  padding-left: 0;
-  padding-right: 0;
-  width: 100%;
-}
-@media (min-width: 992px) {
-  .container--mobile--no-padding {
-    padding-left: 15px;
-    padding-right: 15px;
-    width: 970px;
-  }
-}
-@media (min-width: 1170px) {
-  .container--mobile--no-padding {
-    width: 1170px;
-  }
-}
 .slider {
   background-image: url('../img/bg/slider-bg.jpg');
   background-position: center;
@@ -463,19 +588,39 @@ p {
   -webkit-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  padding-top: 100px;
-  padding-bottom: 127px;
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 74px;
   box-shadow: 0px 3px 25px 0px #688ab3;
+}
+@media (min-width: 768px) {
+  .slider {
+    padding-bottom: 83px;
+  }
+}
+@media (min-width: 1200px) {
+  .slider {
+    padding-bottom: 92px;
+  }
+}
+@media (min-width: 1200px) {
+  .slider {
+    padding-top: 100px;
+  }
 }
 .slider__title {
   font-size: 28px;
-  line-height: 38px;
+  line-height: 39px;
   color: #fff;
   font-family: 'Noto Sans';
   font-weight: 700;
   letter-spacing: -0.5px;
-  text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
+}
+@media (min-width: 768px) {
+  .slider__title {
+    margin-bottom: 6px;
+  }
 }
 @media (min-width: 992px) {
   .slider__title {
@@ -483,12 +628,19 @@ p {
     line-height: 42px;
   }
 }
+@media (min-width: 1200px) {
+  .slider__title {
+    margin-bottom: 17px;
+  }
+}
 .slider__slogan {
+  margin-left: auto;
+  margin-right: auto;
   color: #cddfe0;
   font-size: 18px;
   line-height: 28px;
+  letter-spacing: 0.15px;
   font-family: 'Noto Serif';
-  text-align: center;
 }
 @media (min-width: 992px) {
   .slider__slogan {
@@ -507,20 +659,25 @@ p {
 /* Styling Next and Prev buttons */
 .top-slider-theme .owl-controls .owl-buttons div {
   display: none;
-  position: absolute;
-  width: 72px;
-  height: 72px;
-  background-repeat: no-repeat;
-  /*это св-во можно было не указывать */
-  background-position: left top;
-  /*это св-во можно было не указывать */
-  /*font-size: 0;  можно было так сбросить текст внутри кнопок(1-й вариант). 2-й вариант сброса: в файле main.js установить св-во: navigationText: ['', ''] */
-  top: 50%;
-  margin-top: -36px;
 }
 @media (min-width: 768px) {
   .top-slider-theme .owl-controls .owl-buttons div {
     display: block;
+    position: absolute;
+    width: 72px;
+    height: 72px;
+    background-repeat: no-repeat;
+    /*это св-во можно было не указывать */
+    background-position: left top;
+    /*это св-во можно было не указывать */
+    /*font-size: 0;  можно было так сбросить текст внутри кнопок(1-й вариант). 2-й вариант сброса: в файле main.js установить св-во: navigationText: ['', ''] */
+    top: 50%;
+    margin-top: -36px;
+  }
+}
+@media (min-width: 1200px) {
+  .top-slider-theme .owl-controls .owl-buttons div {
+    margin-top: -47px;
   }
 }
 /* Clickable class fix problem with hover on touch devices */
@@ -557,7 +714,12 @@ p {
   position: absolute;
   bottom: 0;
   width: 100%;
-  bottom: -62px;
+  bottom: -63px;
+}
+@media (min-width: 768px) {
+  .owl-pagination {
+    bottom: -72px;
+  }
 }
 @media (min-width: 992px) {
   .owl-pagination {
@@ -587,7 +749,10 @@ p {
   background: url(AjaxLoader.gif) no-repeat center center;
 }
 .benefit-block {
-  padding-bottom: 38px;
+  padding-bottom: 18px;
+}
+.benefit-block--m-b-12 {
+  margin-bottom: 12px;
 }
 .benefit-block:last-child {
   padding-bottom: 0px;
@@ -602,11 +767,17 @@ p {
 }
 @media (min-width: 1200px) {
   .benefit-block {
-    margin-bottom: 24px;
+    margin-bottom: 3px;
   }
 }
+#benefits:before {
+  display: block;
+  content: "";
+  height: 55px;
+  margin: -55px 0 0;
+}
 .benefit-block__img {
-  margin-bottom: 18px;
+  margin-bottom: 21px;
   height: 130px;
   display: flex;
   justify-content: space-around;
@@ -614,7 +785,7 @@ p {
 }
 @media (min-width: 1200px) {
   .benefit-block__img {
-    margin-bottom: 24px;
+    margin-bottom: 19px;
   }
 }
 .benefit-block__header {
@@ -622,22 +793,53 @@ p {
   line-height: 24px;
   font-weight: 700;
   color: #333;
-  margin-bottom: 15px;
+  margin-bottom: 11px;
+  margin-left: auto;
+  margin-right: auto;
 }
 @media (min-width: 1200px) {
   .benefit-block__header {
     font-size: 22px;
     line-height: 28px;
+    margin-bottom: 16px;
   }
 }
 .benefit-block__text {
+  width: 90%;
   font-size: 14px;
   line-height: 24px;
   color: #777;
-  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 768px) {
+  .benefit-block__text {
+    width: 80%;
+  }
+}
+@media (min-width: 992px) {
+  .benefit-block__text {
+    display: block;
+    content: "";
+    height: 0px;
+    margin: 0px;
+  }
+}
+@media (min-width: 1200px) {
+  .benefit-block__text {
+    width: 100%;
+  }
 }
 .service-description__img {
   position: relative;
+}
+.service-description__img--xs-m-b-34 {
+  margin-bottom: 34px;
+}
+@media (min-width: 768px) {
+  .service-description__img--xs-m-b-34 {
+    margin-bottom: 0;
+  }
 }
 @media (min-width: 1200px) {
   .service-description__img-tablet {
@@ -660,6 +862,22 @@ p {
   margin-top: 0px;
   margin-bottom: 22px;
 }
+@media (min-width: 768px) {
+  .service-description__content {
+    width: 350px;
+  }
+}
+@media (min-width: 1200px) {
+  .service-description__content {
+    width: 97%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .service-description__content p {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 .service-description__button-arrow {
   display: block;
   width: 40px;
@@ -668,6 +886,7 @@ p {
   background-repeat: no-repeat;
   background-position: left top;
   margin-top: -7px;
+  margin-left: 10px;
 }
 @media (min-width: 768px) {
   .service-description__button-arrow {
@@ -677,63 +896,58 @@ p {
 @media (min-width: 1200px) {
   .service-description__button-arrow {
     margin-top: 2px;
+    margin-left: 0;
+    margin-top: 26px;
   }
 }
-.footer-block {
-  margin: 0;
-  padding: 0;
-  padding-top: 36px;
-  padding-left: 2px;
-  padding-right: 2px;
-}
-@media (max-width: 1200px) {
-  .footer-block {
-    padding-top: 76px;
-  }
-}
-.footer-block__header {
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #fff;
-  font-size: 12px;
-  letter-spacing: 3px;
-  margin-bottom: 23px;
-}
-ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  font-size: 14px;
-  color: #6c6c6c;
-}
-li {
-  margin: 0;
-  padding: 0;
-  line-height: 20px;
-  margin-bottom: 16px;
-}
-li:last-child {
-  margin-bottom: 5px;
-}
-.copirite {
-  width: 160px;
-  font-size: 14px;
-  color: #6c6c6c;
-  line-height: 1.6;
-  margin-left: 17px;
-  margin-top: 34px;
-  margin-bottom: 38px;
+.footer {
+  background-color: #252525;
+  color: #6C6C6C;
 }
 @media (min-width: 768px) {
-  .copirite {
-    width: 300px;
-    margin-top: 247px;
-    margin-bottom: 40px;
+  .footer p {
+    width: 100%;
   }
+}
+.footer__title {
+  color: #F7F8F9;
+  font-size: 12px;
+  margin-bottom: 23px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2.8px;
+}
+.footer__nav {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 44px;
+  list-style-type: none;
+  color: #6C6C6C;
+  line-height: 20px;
+}
+.footer__nav li {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 16px;
+  font-size: 14px;
+  font-weight: 400;
+}
+.footer__nav a {
+  color: #6C6C6C;
+  text-decoration: none;
+}
+.footer__nav a:hover {
+  color: #ffc80a;
+  text-decoration: none;
+}
+.copirite {
+  margin-top: -11px;
 }
 @media (min-width: 1200px) {
   .copirite {
-    margin-top: 303px;
-    margin-bottom: 74px;
+    margin-top: 13px;
   }
+}
+.copirite p {
+  padding: 0;
 }

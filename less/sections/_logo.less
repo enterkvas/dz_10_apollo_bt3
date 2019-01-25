@@ -1,21 +1,40 @@
 .logo {
 	text-align: center;
-	padding-top: 30px;
-	padding-bottom: 40px;
+	padding-top: 70px;
+	padding-bottom: 38px;
 	text-transform: uppercase;
+	
+	@media (min-width: 768px) {
+		padding-top: 60px;
+	}
+	@media (min-width: 992px) {
+		padding-top: 16px;
+	}
+	@media (min-width: 1200px) {
+		padding-bottom: 48px;
+	}					
+
 }
 
 .logo__name {
 	color: #000;
 	font-size: 33px;
-	line-height: 1.5;
-	letter-spacing: 5.5px;
+	line-height: 1.35;
+	letter-spacing: 8.2px;
 	font-weight: 700;
+	margin-top: 25px;
 	
 	@media (min-width: 768px) {
+		// font-size: 38px;
+		// letter-spacing: 13px;
+		// line-height: 1.4;
+		margin-top: 34px;
+	}
+	@media (min-width: 1200px) {
 		font-size: 38px;
-		letter-spacing: 13px;
-		line-height: 1.75;
+		letter-spacing: 9.5px;
+		line-height: 1.5;
+		margin-top: 27px;
 	}
 }
 
@@ -23,11 +42,17 @@
 	color: #a1bbd9;
 	font-size: 14px;
 	line-height: 1;
-	letter-spacing: 7.3px;
+	letter-spacing: 9.0px;
 	font-weight: 700;
 	
 	@media (min-width: 768px) {
+		// font-size: 16px;
+		// letter-spacing: 12.5px;
+	}
+	@media (min-width: 1200px) {
 		font-size: 16px;
-		letter-spacing: 12.5px;
+		letter-spacing: 10.3px;
+		// line-height: 1.4;
+		// margin-top: 34px;
 	}
 }
