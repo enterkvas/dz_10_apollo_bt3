@@ -23,7 +23,7 @@ input[type="submit"] {
 }
 /*
  * A better looking default horizontal rule
- */
+*/
 hr {
   display: block;
   height: 1px;
@@ -34,7 +34,7 @@ hr {
 }
 /*
  * Allow only vertical resizing of textareas.
- */
+*/
 textarea {
   resize: vertical;
 }
