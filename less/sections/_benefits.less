@@ -1,9 +1,9 @@
 .benefit-block {
 	padding-bottom: 18px;
 	
-	&--m-b-12 {
-		margin-bottom: 12px;
-	}	
+	// &--m-b-12 {
+	// 	margin-bottom: 12px;
+	// }	
 	&:last-child {
 		padding-bottom: 0px;
 	}	
@@ -17,9 +17,9 @@
 			}
 		}
 
-			@media (min-width: 1200px) {
-				margin-bottom: 3px;
-			}
+		// @media (min-width: 1200px) {
+		// 	margin-bottom: 3px;
+		// }
 }
 #benefits:before { 
 	display: block;
@@ -28,11 +28,23 @@
 	margin: -55px 0 0;
 }
 .benefit-block__img {
-	margin-bottom: 21px;
+	margin-bottom: 13px;
 	height: 130px;	
 	display: flex;	
 	justify-content: space-around;
 	align-items: center;
+
+	&_mb {
+		margin-bottom: 22px;
+	}
+
+	&_mt--10 {
+		margin-top: 10px;
+	}
+
+	&_mt--25 {
+		margin-top: 25px;
+	}
 	
 	@media (min-width: 1200px) {
 		margin-bottom: 19px;
@@ -67,8 +79,8 @@
 	@media (min-width: 992px) {
 		display: block;
 		content: "";
-		height: 0px;
-		margin: 0px;
+		// height: 0px;
+		// margin: 0px;
 	}
 	@media (min-width: 1200px) {
 		width: 100%;
