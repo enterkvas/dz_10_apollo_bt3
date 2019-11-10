@@ -20,7 +20,42 @@
 		padding-top: 23px;
 		padding-bottom: 23px;
 		position: relative;
-	}	
+	}
+	
+	&__toggle-button {
+		display: block;
+		position: relative;
+		padding-left: 15px;
+		padding-top: 21px;
+		padding-bottom: 21px;
+		background-color: #38383A;	
+		cursor: pointer;	
+		
+		&:focus, &:active {
+			background-color: #16385F;		
+		}
+		
+		&:before {
+			content: "";
+			position: absolute;
+			top: 24px;
+			right: 15px;
+			width: 25px;
+			height: 20px;
+			background: url('../img/icons/navigation-icon.png');
+			background-repeat: no-repeat;
+			background-position: 0 0;
+		}
+	
+		@media (min-width: 992px) {
+			display: none;
+		}
+	
+		&__toggle-button--active {
+			background-color: #16385F;
+		}
+		
+	 }// navigation__toggle-button
 		
 	ul {
 		display: none;
@@ -74,40 +109,3 @@
 	}// ul
 
 }// nav
-
-.navigation__toggle-button {
-	display: block;
-	position: relative;
-	padding-left: 15px;
-	padding-top: 21px;
-	padding-bottom: 21px;
-	background-color: #38383A;	
-	cursor: pointer;	
-	
-	&:focus, &:active {
-		background-color: #16385F;		
-	}
-	
-	&:before {
-		content: "";
-		position: absolute;
-		top: 24px;
-		right: 15px;
-		width: 25px;
-		height: 20px;
-		background: url('../img/icons/navigation-icon.png');
-		background-repeat: no-repeat;
-		background-position: 0 0;
-	}
-
-	@media (min-width: 992px) {
-		display: none;
-	}
-	
- }
-
- .navigation__toggle-button--active {
- 	background-color: #16385F;
- }
-
- 
