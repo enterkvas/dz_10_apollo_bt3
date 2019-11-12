@@ -168,8 +168,11 @@ h3,
   .heading--m-b-25 {
     margin-bottom: 25px;
   }
-  .heading--m-b-15 {
-    margin-bottom: 15px;
+  .heading--m-t-10 {
+    margin-top: -10px;
+  }
+  .heading--m-t-20 {
+    margin-top: 20px;
   }
 }
 @media (min-width: 992px) {
@@ -227,8 +230,6 @@ h3,
 }
 @media (min-width: 768px) {
   .section {
-    padding-top: 40px;
-    padding-bottom: 40px;
     /* Prices xs */
   }
   .section--p-80-50 {
@@ -470,6 +471,12 @@ h3,
   padding-top: 30px;
   padding-bottom: 50px;
 }
+@media (min-width: 768px) {
+  .prices {
+    padding-top: 33px;
+    padding-bottom: 102px;
+  }
+}
 .prices .package {
   text-align: center;
   padding-top: 32px;
@@ -630,7 +637,7 @@ h3,
     /*это св-во можно было не указывать */
     /*font-size: 0;  можно было так сбросить текст внутри кнопок(1-й вариант). 2-й вариант сброса: в файле main.js установить св-во: navigationText: ['', ''] */
     top: 50%;
-    margin-top: -36px;
+    margin-top: -25px;
   }
 }
 @media (min-width: 1200px) {
