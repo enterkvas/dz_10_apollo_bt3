@@ -6,6 +6,11 @@
 		padding-bottom: 72px;
 	}
 
+	@media (min-width: 1200px) {
+		padding-top: 58px;
+		padding-bottom: 52px;
+	}
+
 	.benefit-block {
 		padding-bottom: 18px;
 		
@@ -28,14 +33,14 @@
 		// @media (min-width: 1200px) {
 		// 	margin-bottom: 3px;
 		// }
-
+			// 320 & 768 picture 2:
 		&__img {
 			margin-bottom: 13px;
 			height: 130px;	
 			display: flex;	
 			justify-content: space-around;
 			align-items: center;
-		
+				// 320 picture 3:
 			&_mb {
 				margin-bottom: 22px;
 		
@@ -44,25 +49,26 @@
 					margin-top: 17px;
 				}
 			}
-		
+				// 320 picture 4:
 			&_mt--10 {
 				margin-top: 10px;
 		
 				@media (min-width: 768px) {
-					margin-top: 24px;
+					margin-top: 24px; // margin-bottom: 13px; от &__img
 				}
 			}
-		
+				// 320 picture 1:
 			&_mt--25 {
 				margin-top: 25px;
 		
 				@media (min-width: 768px) {
-					margin-top: 0;
+					margin-top: 0; // margin-bottom: 13px; от &__img
 				}
 			}
 			
 			@media (min-width: 1200px) {
 				margin-top: 0px;
+				margin-bottom: 19px;
 			}
 		}
 

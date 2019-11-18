@@ -165,36 +165,37 @@ h3,
   /* Prices */
 }
 @media (min-width: 768px) {
-  .heading--m-b-25 {
+  .heading {
     margin-bottom: 25px;
   }
-  .heading--m-t-10 {
+  .heading--m--10-15 {
     margin-top: -10px;
+    margin-bottom: 15px;
   }
-  .heading--m-t-20 {
+  .heading--m-20-15 {
     margin-top: 20px;
+    margin-bottom: 15px;
   }
-}
-@media (min-width: 992px) {
-  .heading {
-    font-size: 38px;
-    line-height: 48px;
-  }
-  .heading--smaller-margin {
-    margin-bottom: 27px;
+  .heading--m-b-10 {
+    margin-bottom: 10px;
   }
 }
 @media (min-width: 1200px) {
   .heading {
-    padding-left: 0;
-    padding-right: 0;
+    font-size: 38px;
+    line-height: 48px;
+    margin-bottom: 36px;
   }
-  .heading--m-24-23 {
-    margin-top: 24px;
-    margin-bottom: 23px;
+  .heading--m-20-19 {
+    margin-top: 20px;
+    margin-bottom: 19px;
   }
-  .heading--m-b-23 {
-    margin-bottom: 23px;
+  .heading--m-17-19 {
+    margin-top: 17px;
+    margin-bottom: 19px;
+  }
+  .heading--m-b-20 {
+    margin-bottom: 20px;
   }
 }
 .heading--number:before {
@@ -215,7 +216,7 @@ h3,
 @media (min-width: 1200px) {
   .heading--number:before {
     left: -32px;
-    top: -22px;
+    top: -18px;
   }
 }
 .heading--number-1:before {
@@ -245,18 +246,14 @@ h3,
     padding-bottom: 102px;
   }
 }
-@media (min-width: 992px) {
-  .section {
-    margin-top: 0;
-  }
-}
 @media (min-width: 1200px) {
   .section {
-    /* Prices */
+    padding-top: 70px;
+    padding-bottom: 87px;
   }
-  .section--p-54-122 {
-    padding-top: 54px;
-    padding-bottom: 50px;
+  .section--p-70-98 {
+    padding-top: 70px;
+    padding-bottom: 98px;
   }
 }
 .button {
@@ -317,18 +314,14 @@ h3,
 }
 @media (min-width: 768px) {
   .logo {
-    padding-top: 98px;
-    padding-bottom: 38px;
-  }
-}
-@media (min-width: 992px) {
-  .logo {
-    padding-top: 16px;
+    padding-top: 97px;
+    padding-bottom: 37px;
   }
 }
 @media (min-width: 1200px) {
   .logo {
-    padding-bottom: 48px;
+    padding-bottom: 50px;
+    padding-top: 23px;
   }
 }
 .logo__name {
@@ -441,6 +434,9 @@ h3,
   padding: 0;
   border-bottom: 1px solid #466A92;
 }
+.navigation ul li:last-child {
+  border-bottom: none;
+}
 @media (min-width: 992px) {
   .navigation ul li {
     border-bottom: none;
@@ -475,6 +471,12 @@ h3,
   .prices {
     padding-top: 33px;
     padding-bottom: 102px;
+  }
+}
+@media (min-width: 1200px) {
+  .prices {
+    padding-top: 60px;
+    padding-bottom: 90px;
   }
 }
 .prices .package {
@@ -565,12 +567,8 @@ h3,
 }
 @media (min-width: 1200px) {
   .slider {
-    padding-bottom: 92px;
-  }
-}
-@media (min-width: 1200px) {
-  .slider {
     padding-top: 100px;
+    padding-bottom: 92px;
   }
 }
 .slider__title {
@@ -721,6 +719,12 @@ h3,
     padding-bottom: 72px;
   }
 }
+@media (min-width: 1200px) {
+  .benefits {
+    padding-top: 58px;
+    padding-bottom: 52px;
+  }
+}
 .benefits .benefit-block {
   padding-bottom: 18px;
 }
@@ -770,6 +774,7 @@ h3,
 @media (min-width: 1200px) {
   .benefits .benefit-block__img {
     margin-top: 0px;
+    margin-bottom: 19px;
   }
 }
 .benefits .benefit-block__header {
@@ -870,7 +875,6 @@ h3,
 }
 @media (min-width: 1200px) {
   .service-description__content {
-    width: 97%;
     padding-left: 0;
     padding-right: 0;
   }
@@ -907,6 +911,12 @@ h3,
   color: #6C6C6C;
   padding-top: 35px;
   padding-bottom: 35px;
+}
+@media (min-width: 1200px) {
+  .footer {
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
 }
 @media (min-width: 768px) {
   .footer p {
