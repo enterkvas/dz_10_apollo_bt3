@@ -320,15 +320,15 @@ h3,
 }
 @media (min-width: 1200px) {
   .logo {
-    padding-bottom: 50px;
-    padding-top: 23px;
+    padding-top: 17px;
+    padding-bottom: 48px;
   }
 }
 .logo__name {
   color: #000;
   font-size: 33px;
   line-height: 1.38;
-  letter-spacing: 8.2px;
+  letter-spacing: 8.4px;
   font-weight: 700;
   margin-top: 25px;
 }
@@ -349,7 +349,7 @@ h3,
   color: #a1bbd9;
   font-size: 14px;
   line-height: 1;
-  letter-spacing: 9.0px;
+  letter-spacing: 8.8px;
   font-weight: 700;
 }
 @media (min-width: 1200px) {
@@ -376,8 +376,8 @@ h3,
 }
 @media (min-width: 992px) {
   .navigation {
-    padding-top: 23px;
-    padding-bottom: 23px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     position: relative;
   }
 }
