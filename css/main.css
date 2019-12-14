@@ -62,7 +62,7 @@ textarea {
 html,
 body {
   height: 100%;
-  min-width: 310px;
+  min-width: 320px;
 }
 html {
   height: 100%;
@@ -162,7 +162,6 @@ h3,
   font-weight: 700;
   letter-spacing: -0.5px;
   position: relative;
-  /* Prices */
 }
 @media (min-width: 768px) {
   .heading {
@@ -230,9 +229,6 @@ h3,
   padding-left: 9px;
 }
 @media (min-width: 768px) {
-  .section {
-    /* Prices xs */
-  }
   .section--p-80-50 {
     padding-top: 80px;
     padding-bottom: 50px;
@@ -240,10 +236,6 @@ h3,
   .section--p-50-50 {
     padding-top: 50px;
     padding-bottom: 50px;
-  }
-  .section--p-32-102 {
-    padding-top: 32px;
-    padding-bottom: 102px;
   }
 }
 @media (min-width: 1200px) {
@@ -314,8 +306,14 @@ h3,
 }
 @media (min-width: 768px) {
   .logo {
-    padding-top: 97px;
-    padding-bottom: 37px;
+    padding-top: 98px;
+    padding-bottom: 38px;
+  }
+}
+@media (min-width: 992px) {
+  .logo {
+    padding-top: 40px;
+    padding-bottom: 48px;
   }
 }
 @media (min-width: 1200px) {
@@ -361,7 +359,7 @@ h3,
 .navigation {
   background-color: #38383A;
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 4px;
   color: #fff;
@@ -381,7 +379,7 @@ h3,
     position: relative;
   }
 }
-.navigation__toggle-button {
+.navigation .navigation__toggle-button {
   display: block;
   position: relative;
   padding-left: 15px;
@@ -390,11 +388,7 @@ h3,
   background-color: #38383A;
   cursor: pointer;
 }
-.navigation__toggle-button:focus,
-.navigation__toggle-button:active {
-  background-color: #16385F;
-}
-.navigation__toggle-button:before {
+.navigation .navigation__toggle-button:before {
   content: "";
   position: absolute;
   top: 24px;
@@ -406,11 +400,11 @@ h3,
   background-position: 0 0;
 }
 @media (min-width: 992px) {
-  .navigation__toggle-button {
+  .navigation .navigation__toggle-button {
     display: none;
   }
 }
-.navigation__toggle-button__toggle-button--active {
+.navigation .navigation__toggle-button--active {
   background-color: #16385F;
 }
 .navigation ul {
@@ -442,9 +436,6 @@ h3,
     border-bottom: none;
   }
 }
-.navigation ul li.active {
-  color: #ffcc00;
-}
 .navigation ul li a {
   display: block;
   color: #fff;
@@ -458,10 +449,10 @@ h3,
     text-decoration: none;
     border-bottom: none;
   }
-}
-.navigation ul li a:hover,
-.navigation ul li a.active {
-  color: #ffcc00;
+  .navigation ul li a:hover,
+  .navigation ul li a.active {
+    color: #ffcc00;
+  }
 }
 .prices {
   padding-top: 30px;
@@ -619,9 +610,48 @@ h3,
   margin-top: 10px;
   text-align: center;
 }
+/* Styling Pagination*/
+.top-slider-theme .owl-controls .owl-page {
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  /*IE7 life-saver */
+}
+.top-slider-theme .owl-controls .owl-page span {
+  display: block;
+  width: 12px;
+  height: 12px;
+  margin: 5px 7px;
+  filter: alpha(opacity=50);
+  /*IE7 fix*/
+  opacity: 0.5;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  background: #fff;
+}
+.top-slider-theme .owl-controls .owl-page.active span,
+.top-slider-theme .owl-controls.clickable .owl-page:hover span {
+  filter: alpha(opacity=100);
+  /*IE7 fix*/
+  opacity: 1;
+}
+/* If PaginationNumbers is true */
+.top-slider-theme .owl-controls .owl-page span.owl-numbers {
+  height: auto;
+  width: auto;
+  color: #FFF;
+  padding: 2px 10px;
+  font-size: 12px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+}
 /* Styling Next and Prev buttons */
 .top-slider-theme .owl-controls .owl-buttons div {
   display: none;
+  /* Clickable class fix problem with hover on touch devices */
+  /* Use it for non-touch hover action */
 }
 @media (min-width: 768px) {
   .top-slider-theme .owl-controls .owl-buttons div {
@@ -643,8 +673,6 @@ h3,
     margin-top: -47px;
   }
 }
-/* Clickable class fix problem with hover on touch devices */
-/* Use it for non-touch hover action */
 .owl-prev {
   left: 0;
   background-image: url('../img/icons/arrow-left.png');
@@ -652,26 +680,6 @@ h3,
 .owl-next {
   right: 0;
   background-image: url('../img/icons/arrow-right.png');
-}
-/* Styling Pagination*/
-.top-slider-theme .owl-controls .owl-page {
-  display: inline-block;
-  zoom: 1;
-  *display: inline;
-  /*IE7 life-saver */
-}
-.top-slider-theme .owl-controls .owl-page span {
-  display: block;
-  width: 12px;
-  height: 12px;
-  margin: 5px 7px;
-  filter: alpha(opacity=50);
-  /*IE7 fix*/
-  opacity: 0.5;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  border-radius: 20px;
-  background: #fff;
 }
 .owl-pagination {
   position: absolute;
@@ -689,23 +697,6 @@ h3,
     display: none;
   }
 }
-.top-slider-theme .owl-controls .owl-page.active span,
-.top-slider-theme .owl-controls.clickable .owl-page:hover span {
-  filter: alpha(opacity=100);
-  /*IE7 fix*/
-  opacity: 1;
-}
-/* If PaginationNumbers is true */
-.top-slider-theme .owl-controls .owl-page span.owl-numbers {
-  height: auto;
-  width: auto;
-  color: #FFF;
-  padding: 2px 10px;
-  font-size: 12px;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  border-radius: 30px;
-}
 /* preloading images */
 .owl-item.loading {
   min-height: 150px;
@@ -714,9 +705,9 @@ h3,
 .benefits {
   padding-top: 33px;
 }
-@media (min-width: 678px) {
+@media (min-width: 768px) {
   .benefits {
-    padding-bottom: 72px;
+    padding-bottom: 74px;
   }
 }
 @media (min-width: 1200px) {
@@ -964,4 +955,43 @@ h3,
 }
 .footer .copirite p {
   padding: 0;
+}
+.btn_up {
+  position: fixed;
+  bottom: -50px;
+  right: 15px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  background: #333;
+  z-index: 100;
+  outline: 0!important;
+}
+@media (min-width: 992px) {
+  .btn_up {
+    right: 10px;
+  }
+}
+@media (min-width: 1200px) {
+  .btn_up {
+    right: 90px;
+  }
+}
+.btn_up:after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #ccc;
+  border-right: 2px solid #ccc;
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 4px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.btn_up.active {
+  bottom: 50px;
 }

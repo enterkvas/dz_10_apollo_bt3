@@ -4,6 +4,8 @@
 	padding-top: 35px;
 	padding-bottom: 35px;
 
+	// position: relative;
+
 	@media (min-width: 1200px) {
 		padding-top: 75px;
 		padding-bottom: 75px;
@@ -51,6 +53,7 @@
 	}
 
 	.copirite {
+		// position: relative;
 		margin-top: -11px;
 		
 		@media (min-width: 1200px) {
@@ -58,8 +61,46 @@
 		}
 	}
 
-		.copirite p {
-			padding: 0;
+		.copirite p {padding: 0;}
+
+}
+	// Кнопка "вверх":
+	.btn_up {
+		position: fixed;
+		bottom: -50px;
+		right: 15px;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		border: 2px solid #ccc;
+		background: #333;
+		z-index: 100;
+		outline: 0!important;
+
+		@media (min-width: 992px) {			
+			right: 10px;			
+		}
+	
+		@media (min-width: 1200px) {		
+			right: 90px;			
+		}
+	
+
+		&:after {
+			content: '';
+			width: 10px;
+			height: 10px;
+			border-top: 2px solid #ccc;
+			border-right: 2px solid #ccc;
+			transform: rotate(-45deg);
+			position: absolute;
+			top: 4px; bottom: 0; 
+			left: 0; right: 0;
+			margin: auto;
 		}
 
+		&.active {bottom: 50px;}
 	}
+
+
+	

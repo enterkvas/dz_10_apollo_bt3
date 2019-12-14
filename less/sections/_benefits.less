@@ -1,9 +1,8 @@
 .benefits {
-
 	padding-top: 33px;	
 	
-	@media (min-width: 678px) {
-		padding-bottom: 72px;
+	@media (min-width: 768px) {
+		padding-bottom: 74px;
 	}
 
 	@media (min-width: 1200px) {
@@ -14,9 +13,6 @@
 	.benefit-block {
 		padding-bottom: 18px;
 		
-		// &--m-b-12 {
-		// 	margin-bottom: 12px;
-		// }	
 		&:last-child {
 			padding-bottom: 50px;
 		}	
@@ -25,14 +21,8 @@
 			&:nth-last-child(2) {
 				padding-bottom: 0px;			
 			}
-			&:last-child {
-				padding-bottom: 0px;
-			}
-		}
-
-		// @media (min-width: 1200px) {
-		// 	margin-bottom: 3px;
-		// }
+			&:last-child {padding-bottom: 0px;}
+		}		
 			// 320 & 768 picture 2:
 		&__img {
 			margin-bottom: 13px;
@@ -101,16 +91,14 @@
 			}	
 			@media (min-width: 992px) {
 				display: block;
-				content: "";
-				// height: 0px;
-				// margin: 0px;
+				content: "";				
 			}
 			@media (min-width: 1200px) {
 				width: 100%;
 			}
 		}
-
 	}
+	
 	#benefits:before { 
 		display: block;
 		content: "";
