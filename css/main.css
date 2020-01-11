@@ -945,15 +945,15 @@ h3,
   color: #ffc80a;
   text-decoration: none;
 }
-.footer .copirite {
+.footer .copyright {
   margin-top: -11px;
 }
 @media (min-width: 1200px) {
-  .footer .copirite {
+  .footer .copyright {
     margin-top: 13px;
   }
 }
-.footer .copirite p {
+.footer .copyright p {
   padding: 0;
 }
 .btn_up {
