@@ -93,6 +93,26 @@ h3,
   border-top: 1px solid #EAEFF5;
 }
 /* -- Псевдоэлементы-отступы сверху для ссылок-якорей блока навигации -- */
+#freelance:before,
+#startup:before,
+#price:before,
+#footer:before {
+  display: block;
+  content: "";
+  height: 55px;
+  margin: -55px 0 0;
+}
+@media (min-width: 992px) {
+  #freelance:before,
+  #startup:before,
+  #price:before,
+  #footer:before {
+    display: block;
+    content: "";
+    height: 0px;
+    margin: 0px;
+  }
+}
 /* -- // Псевдоэлементы-отступы сверху для ссылок-якорей блока навигации -- */
 .heading {
   font-size: 28px;
@@ -231,7 +251,7 @@ h3,
     width: 970px;
   }
 }
-@media (min-width: 1170px) {
+@media (min-width: 1200px) {
   .container--mobile-no-padding {
     width: 1170px;
   }
@@ -550,6 +570,11 @@ h3,
   }
   .navigation ul li a:hover,
   .navigation ul li a.active {
+    color: #ffcc00;
+  }
+}
+@media (min-width: 992px) {
+  .navigation ul li a.selected {
     color: #ffcc00;
   }
 }
