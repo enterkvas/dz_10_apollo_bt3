@@ -50,11 +50,8 @@ $(document).ready(function() {
 	function fnstart(){	
 		if ( pull.hasClass("navigation__toggle-button--active")  ) {
    			pull.toggleClass('navigation__toggle-button--active');
-			menu.slideToggle();									
-		} else {
-
+			menu.slideToggle();	
 		}
-
 	};
 	// Вызов слайдера owl-carousel
 	$("#top-slider").owlCarousel({
