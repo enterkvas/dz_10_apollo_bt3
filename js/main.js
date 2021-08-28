@@ -23,6 +23,9 @@ $(document).ready(function () {
 		menu.slideToggle();
 		// Добавляем модификатор --active
 		$(this).toggleClass('navigation__toggle-button--active');
+		// Добавляем отступы сверху (чтобы не закрыало заголовок)
+		$('.prices').css('margin-top', '50px');
+		$('.benefits').css('margin-top', '50px');
 	});
 
 	// При изменении размера окна, в большую сторону, если меню было скрыто, показываем его
@@ -34,6 +37,9 @@ $(document).ready(function () {
 			pull.removeClass('navigation__toggle-button--active');
 			// Этот скрипт должен работать для текста нижеуказанного при ИЗМЕНЕНИИ ШИРИНЫ окна:			
 			$('#change_text_1200').html('<div id="change_text_1200" class="slider__slogan">Разместите свое портфолио и сайты<br> клиентов. Надежные сервера,<br> отзывчивая техподдержка.</div>');
+			// Убираем отступы сверху (нужны были для w<992px)
+			$('.prices').css('margin-top', '0px');
+			$('.benefits').css('margin-top', '0px');
 		} else {
 			$('#change_text_1200').html('<div id="change_text_1200" class="slider__slogan">Разместите свое портфолио и сайты клиентов. Надежные сервера,<br> отзывчивая техподдержка.</div>');
 		};
