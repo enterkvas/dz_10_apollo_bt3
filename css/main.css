@@ -256,6 +256,9 @@ h3,
     width: 1170px;
   }
 }
+.mt-50 {
+  margin-top: 50px;
+}
 .package {
   text-align: center;
   padding-top: 32px;
