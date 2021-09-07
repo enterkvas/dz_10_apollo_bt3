@@ -35,24 +35,26 @@
 
 	<!-- Logo -->
 	<div class="logo" id="main">
-		<div class="logo__name">аполло 404</div>
-		<div class="logo__slogan">хостинг компания</div>
+		<div class="container">
+			<div class="logo__name">аполло 404</div>
+			<div class="logo__slogan">хостинг компания</div>
+		</div>
 	</div>
 	<!-- / Logo -->
 
 	<!-- Navigation -->
 	<nav class="navigation">		
-		<div class="container container--mobile-no-padding">
+		<div class="container">
 			<div id="navigation-toggle" class="navigation__toggle-button">
 				Навигация
 			</div>
 			<ul>
-				<li><a class="selected" href="#main">главная</a></li>
-				<li><a href="#benefits">как-мы-работаем</a></li>
-				<li><a href="#freelance">фрилансерам</a></li>
-				<li><a href="#startup">стартапам</a></li>
-				<li><a href="#prices">тарифы</a></li>
-				<li><a href="#footer">контакты</a></li>
+				<li><a data-goto="#main" href="#" class="menu__link">главная</a></li>
+				<li><a data-goto="#benefits" href="#" class="menu__link">как-мы-работаем</a></li>
+				<li><a data-goto="#freelance" href="#" class="menu__link">фрилансерам</a></li>
+				<li><a data-goto="#startup" href="#" class="menu__link">стартапам</a></li>
+				<li><a data-goto="#prices" href="#" class="menu__link">тарифы</a></li>
+				<li><a data-goto="#footer" href="#" class="menu__link">контакты</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -399,7 +401,7 @@
 	<!-- / Prices -->
 
 	<!-- Footer -->
-	<footer id="footer" class=" footer">
+	<footer id="footer" class=" footer">		
 		<div class="container">
 			<!-- Footer nav -->
 			<nav class="row">

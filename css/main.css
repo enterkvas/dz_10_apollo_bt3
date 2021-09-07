@@ -92,28 +92,7 @@ h3,
 .line {
   border-top: 1px solid #EAEFF5;
 }
-/* -- Псевдоэлементы-отступы сверху для ссылок-якорей блока навигации -- */
-#freelance:before,
-#startup:before,
-#price:before,
-#footer:before {
-  display: block;
-  content: "";
-  height: 55px;
-  margin: -55px 0 0;
-}
-@media (min-width: 992px) {
-  #freelance:before,
-  #startup:before,
-  #price:before,
-  #footer:before {
-    display: block;
-    content: "";
-    height: 0px;
-    margin: 0px;
-  }
-}
-/* -- // Псевдоэлементы-отступы сверху для ссылок-якорей блока навигации -- */
+/* -- Псевдоэлементы-отступы сверху для ссылок-якорей блока навигации Этот код не работает, видимо На всякий случай его оставил-- */
 .heading {
   font-size: 28px;
   line-height: 38px;
@@ -232,12 +211,44 @@ h3,
   background-color: #ffc80a;
   padding: 14px 28px;
 }
-.button--orange:hover,
-.button--orange:active,
-.button--orange:focus {
-  background-color: #FFE400;
-  color: #000;
-  text-decoration: none;
+.btn_up {
+  position: fixed;
+  bottom: -50px;
+  right: 15px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  background: #333;
+  z-index: 100;
+  outline: 0!important;
+}
+@media (min-width: 992px) {
+  .btn_up {
+    right: 10px;
+  }
+}
+@media (min-width: 1200px) {
+  .btn_up {
+    right: 90px;
+  }
+}
+.btn_up:after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #ccc;
+  border-right: 2px solid #ccc;
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 4px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.btn_up.active {
+  bottom: 50px;
 }
 .container--mobile-no-padding {
   padding-left: 0;
@@ -255,9 +266,6 @@ h3,
   .container--mobile-no-padding {
     width: 1170px;
   }
-}
-.mt-50 {
-  margin-top: 50px;
 }
 .package {
   text-align: center;
@@ -448,7 +456,7 @@ h3,
   color: #000;
   font-size: 33px;
   line-height: 1.38;
-  letter-spacing: 8.4px;
+  letter-spacing: 7.6px;
   font-weight: 700;
   margin-top: 25px;
 }
@@ -469,7 +477,7 @@ h3,
   color: #a1bbd9;
   font-size: 14px;
   line-height: 1;
-  letter-spacing: 8.8px;
+  letter-spacing: 8.3px;
   font-weight: 700;
 }
 @media (min-width: 1200px) {
@@ -504,7 +512,6 @@ h3,
 .navigation__toggle-button {
   display: block;
   position: relative;
-  padding-left: 15px;
   padding-top: 21px;
   padding-bottom: 21px;
   background-color: #38383A;
@@ -514,12 +521,17 @@ h3,
   content: "";
   position: absolute;
   top: 24px;
-  right: 30px;
+  right: 14px;
   width: 25px;
   height: 20px;
   background: url('../img/icons/navigation-icon.png');
   background-repeat: no-repeat;
   background-position: 0 0;
+}
+@media (min-width: 768px) {
+  .navigation__toggle-button:before {
+    right: 0px;
+  }
 }
 @media (min-width: 992px) {
   .navigation__toggle-button {
@@ -536,6 +548,9 @@ h3,
   padding: 0;
   list-style-type: none;
   line-height: 20px;
+}
+.navigation ul.hide {
+  transform: translateY(-1000px);
 }
 @media (min-width: 992px) {
   .navigation ul {
@@ -948,43 +963,4 @@ h3,
 }
 .footer .copyright p {
   padding: 0;
-}
-.btn_up {
-  position: fixed;
-  bottom: -50px;
-  right: 15px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border: 2px solid #ccc;
-  background: #333;
-  z-index: 100;
-  outline: 0!important;
-}
-@media (min-width: 992px) {
-  .btn_up {
-    right: 10px;
-  }
-}
-@media (min-width: 1200px) {
-  .btn_up {
-    right: 90px;
-  }
-}
-.btn_up:after {
-  content: '';
-  width: 10px;
-  height: 10px;
-  border-top: 2px solid #ccc;
-  border-right: 2px solid #ccc;
-  transform: rotate(-45deg);
-  position: absolute;
-  top: 4px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-}
-.btn_up.active {
-  bottom: 50px;
 }

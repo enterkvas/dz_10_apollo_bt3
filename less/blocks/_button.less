@@ -21,11 +21,36 @@
 }
 .button--orange {
 	background-color: @orange;
-	padding: 14px 28px;
-	
-	&:hover,  &:active, &:focus {
-	 	background-color: #FFE400;
-	 	color: #000;
-	 	text-decoration: none;
+	padding: 14px 28px;	
+}
+// Кнопка "вверх":
+.btn_up {
+	position: fixed;
+	bottom: -50px;
+	right: 15px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	border: 2px solid #ccc;
+	background: #333;
+	z-index: 100;
+	outline: 0!important;		
+
+	@media (min-width: 992px) {right: 10px;}
+	@media (min-width: 1200px) {right: 90px;}
+
+	&:after {
+		content: '';
+		width: 10px;
+		height: 10px;
+		border-top: 2px solid #ccc;
+		border-right: 2px solid #ccc;
+		transform: rotate(-45deg);
+		position: absolute;
+		top: 4px; bottom: 0; 
+		left: 0; right: 0;
+		margin: auto;
 	}
+
+	&.active {bottom: 50px;}
 }
