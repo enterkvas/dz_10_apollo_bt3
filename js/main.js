@@ -1,16 +1,16 @@
 $(document).ready(function () {
-	var menu = $('.navigation ul'),
+	var menu = $('.menu__list'),
 			pull = $('#navigation-toggle'),
-			anchor = $('nav.navigation a');
+			anchor = $('.navigation a');
 
 	// Скрипт для показа и скрытия выпадающего меню на смартфонах
 	// Создаем переменые для кнопки, меню и ссылки:		
 	// Описываем событие при нажатии на кнопку бургера
 	$(pull).on("click", function (e) {
 		// Отменяем стандартное поведение ссылки в браузере
-		e.preventDefault();
+		e.preventDefault();		
 		// Открываем/Скрываем меню
-		menu.slideToggle();
+		menu.slideToggle();		
 		// Добавляем модификатор --active
 		$(this).toggleClass('navigation__toggle-button--active');		
 	});
