@@ -106,8 +106,8 @@ h3,
   .heading {
     margin-bottom: 25px;
   }
-  .heading--m--10-15 {
-    margin-top: -10px;
+  .heading--m--8-15 {
+    margin-top: -8px;
     margin-bottom: 15px;
   }
   .heading--m-20-15 {
@@ -250,23 +250,6 @@ h3,
 }
 .btn_up.active {
   bottom: 50px;
-}
-.container--mobile-no-padding {
-  padding-left: -15px;
-  padding-right: -15px;
-  width: 100%;
-}
-@media (min-width: 992px) {
-  .container--mobile-no-padding {
-    padding-left: 0;
-    padding-right: 0;
-    width: 970px;
-  }
-}
-@media (min-width: 1200px) {
-  .container--mobile-no-padding {
-    width: 1170px;
-  }
 }
 .package {
   text-align: center;
@@ -867,11 +850,6 @@ h3,
   width: 98%;
   margin-top: 15px;
 }
-@media (min-width: 768px) {
-  .service-description__content {
-    width: 100%;
-  }
-}
 .service-description__content p {
   margin-top: 0px;
   margin-bottom: 22px;
@@ -937,7 +915,7 @@ h3,
 .footer__nav {
   margin: 0;
   padding: 0;
-  margin-bottom: 44px;
+  margin-bottom: 42px;
   list-style-type: none;
   color: #6C6C6C;
   line-height: 20px;
