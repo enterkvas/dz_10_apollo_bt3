@@ -1,10 +1,18 @@
+jQuery.event.special.touchstart = {
+  setup: function( _, ns, handle ){
+    if ( ns.includes("noPreventDefault") ) {
+      this.addEventListener("touchstart", handle, { passive: false });
+    } else {
+      this.addEventListener("touchstart", handle, { passive: true });
+    }
+  }
+};
 $(document).ready(function () {
 	var menu = $('.menu__list'),
 			pull = $('#navigation-toggle'),
 			anchor = $('.navigation a');
-
 	// Скрипт для показа и скрытия выпадающего меню на смартфонах
-	// Создаем переменые для кнопки, меню и ссылки:		
+	// Создаем переменные для кнопки, меню и ссылки:		
 	// Описываем событие при нажатии на кнопку бургера
 	$(pull).on("click", function (e) {
 		// Отменяем стандартное поведение ссылки в браузере
@@ -12,7 +20,9 @@ $(document).ready(function () {
 		// Открываем/Скрываем меню
 		menu.slideToggle();		
 		// Добавляем модификатор --active
-		$(this).toggleClass('navigation__toggle-button--active');		
+		$(this).toggleClass('navigation__toggle-button--active');
+		$('body').animate({ scrollTop: 0 }, 1000);
+		$('html').animate({ scrollTop: 0 }, 1000);		
 	});
 
 	// Скрываем меню на смартфоне и планшете при клике на пункты в выпадающем меню
@@ -36,8 +46,7 @@ $(document).ready(function () {
 		$('#change_text_1200').html('<div id="change_text_1200" class="slider__slogan">Разместите свое портфолио и сайты<br> клиентов. Надежные сервера,<br> отзывчивая техподдержка.</div>');
 	} else {
 		$('#change_text_1200').html('<div id="change_text_1200" class="slider__slogan">Разместите свое портфолио и сайты клиентов. Надежные сервера,<br> отзывчивая техподдержка.</div>');
-	}
-
+	}	
 	// При изменении размера окна, в большую сторону, если меню было скрыто, показываем его
 	// И у кнопки убираем модификатор --active	
 	$(window).resize(function () {		
@@ -70,7 +79,6 @@ $(document).ready(function () {
 	// });
 
 // Кнопка вверх (.btn_up)
-
 	$('body').append('<div title="Наверх"><button class="btn_up"></button></div>');
 
 	$('.btn_up').click(function () {
@@ -93,26 +101,25 @@ $(document).ready(function () {
 
 //=======================//
 
-// Ниже код нативного js
+// Код нативного js плавная прокрутка по ссылкам внутри страницы
 
 "use strict";
-// Прокрутка при клике
 const menuLinks = document.querySelectorAll('.menu__link[data-goto]');
 if (menuLinks.length > 0) {
 	menuLinks.forEach(menuLink => {
 		menuLink.addEventListener("click", onMenuLinkClick);
 	});
 	function onMenuLinkClick(e) {
-		const menuLink = e.target;
+		const menuLink = e.target;		
 		if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)){
 			const gotoBlock = document.querySelector(menuLink.dataset.goto);
-			const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('.heading').offsetHeight;	
+			const gotoBlockValue = gotoBlock.getBoundingClientRect().top - document.querySelector('.heading').offsetHeight;				
 
 			window.scrollTo({
 				top: gotoBlockValue,
 				behavior: "smooth" /* указывает ПЛАВНУЮ прокрутку */
 			});
-			e.preventDefault(); /* отменяем стандартное поведение ссылки */
-		}
-	}
+			e.preventDefault(); /* отменяем стандартное поведение ссылки */			
+		}		
+	}	
 }

@@ -1,36 +1,42 @@
 .prices {
-	padding-top: 29px;
-	padding-bottom: 50px;
+  padding-top: 29px;
+  padding-bottom: 50px;
 
-	@media (min-width: 768px) {
-    	padding-top: 34px;
-		padding-bottom: 102px;    
-	}
+  @media (min-width: 768px) {
+    padding-top: 34px;
+    padding-bottom: 102px;
+  }
 
-	@media (min-width: 1200px) {
-    	padding-top: 64px;
-		padding-bottom: 90px;    
-	}
+  @media (min-width: 992px) {
+    padding-bottom: 0;
+  }
 
-	&__subtitle-text {
-		font-size: 14px;
-		line-height: 24px;
-		color: #777;
-		margin: 10px 20px 37px;	
-		
-		@media (min-width: 768px) {
-			width: 75%;
-			margin-left: auto;
-			margin-right: auto;
-		}
-		@media (min-width: 1200px) {
-			width: 80%;
-			margin-left: auto;
-			margin-right: auto;
-			margin-bottom: 53px;
-			padding-left: 0px;
-			padding-right: 0px;
-		}
-	}	
+  @media (min-width: 1200px) {
+    padding-top: 73px;
+    padding-bottom: 90px;
+  }
+
+  &__subtitle-text {
+    font-size: 14px;
+    line-height: 24px;
+    color: #777;
+    margin: 10px 20px 37px;
+
+    @media (min-width: 768px) {
+      width: 75%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media (min-width: 992px) {
+      margin-top: -10px;
+    }
+    @media (min-width: 1200px) {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 53px;
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+  }
 }
-

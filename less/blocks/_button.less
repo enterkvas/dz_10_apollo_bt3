@@ -1,55 +1,70 @@
-.button {	
-	  background-color: rgb(37, 37, 37);
-	  box-shadow: 0px 8px 16px 0px rgba(171, 171, 171, 1);
-	  color: #fff;
-	  font-size: 14px;
-	  font-weight: 700;
-	  text-transform: uppercase;
-	  -webkit-border-radius: 22px;
-	          border-radius: 22px;
-	  letter-spacing: 0.8px;
-	  line-height: 1;
-	  display: inline-block;
-	  padding: 14px 44px;	  
-	  
-	&:hover,  &:active, &:focus {
-		background-color: @orange;
-	 	color: #fff;
-	 	text-decoration: none;
-	}
+.button {
+  background-color: rgb(37, 37, 37);
+  box-shadow: 0px 8px 16px 0px rgba(171, 171, 171, 1);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  -webkit-border-radius: 22px;
+  border-radius: 22px;
+  letter-spacing: 0.8px;
+  line-height: 1;
+  display: inline-block;
+  padding: 14px 44px;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: @orange;
+    color: #fff;
+    text-decoration: none;
+  }
 }
 .button--orange {
-	background-color: @orange;
-	padding: 14px 28px;	
+  background-color: @orange;
+  padding: 14px 28px;
 }
 // Кнопка "вверх":
 .btn_up {
-	position: fixed;
-	bottom: -50px;
-	right: 15px;
-	width: 50px;
-	height: 50px;
-	border-radius: 50%;
-	border: 2px solid #ccc;
-	background: #333;
-	z-index: 100;
-	outline: 0!important;		
+  position: fixed;
+  bottom: -50px;
+  right: 15px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  background: #16385f;
+  z-index: 100;
+  outline: 0 !important;
 
-	@media (min-width: 992px) {right: 10px;}
-	@media (min-width: 1200px) {right: 90px;}
+  &:after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #ccc;
+    border-right: 2px solid #ccc;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 4px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
 
-	&:after {
-		content: '';
-		width: 10px;
-		height: 10px;
-		border-top: 2px solid #ccc;
-		border-right: 2px solid #ccc;
-		transform: rotate(-45deg);
-		position: absolute;
-		top: 4px; bottom: 0; 
-		left: 0; right: 0;
-		margin: auto;
-	}
-
-	&.active {bottom: 50px;}
+  &.active {
+    bottom: 20px;
+    @media (min-width: 992px) {
+      right: 50px;
+      bottom: 50px;
+    }
+    @media (min-width: 1200px) {
+      right: 100px;
+      bottom: 100px;
+    }
+    @media (min-width: 1440px) {
+      right: 200px;
+      bottom: 200px;
+    }
+  }
 }

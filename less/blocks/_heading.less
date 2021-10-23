@@ -1,78 +1,91 @@
-.heading {	
-			// How we work 
-	font-size: 28px;
-	line-height: 38px;
-	font-weight: 700;
-	letter-spacing: -0.5px;	
-	position: relative;			
-			
-	@media (min-width: 768px) {
-		// How we work					
-		margin-bottom: 25px;					
-		// Freelance 			
-		&--m--8-15 {			
-			margin-top: -8px;
-			margin-bottom: 15px;
-		}
-		// Startup hosting
-		&--m-20-15 {			
-			margin-top: 20px;
-			margin-bottom: 15px;
-		}
-		// Prices
-		&--mb-10 {margin-bottom: 10px;}					
-	}	
-		
-	@media (min-width: 1200px) {
-		font-size: 38px;
-		line-height: 48px;
-			// How we work
-		margin-bottom: 36px;		
-		
-		&--m-20-19 {
-			margin-top: 20px;
-			margin-bottom: 19px;
-		}
-			// Startup hosting
-		&--m-17-19 {
-			margin-top: 17px;
-			margin-bottom: 19px;
-		}
-			// Prices
-		&--mb-20 {margin-bottom: 20px;}
-	}	
-	
-	&--number:before {		
-		height: 26px;
-		width: 26px;
-		display: block;
-		-webkit-border-radius: 13px;
-				border-radius: 13px;		
-		background-color: @orange;
-		color: #fff;
-		font-size: 15px;
-		font-weight: 700;
-		line-height: 1;		
-		
-		position: absolute;
-		left: -13px;
-		top: -39px;		
-		
-		@media (min-width: 1200px) {			
-			left: -32px;
-			top: -18px;
-		}						
-	}
+.heading {
+  // How we work
+  font-size: 28px;
+  line-height: 38px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  position: relative;
 
-	&--number-1:before {
-		content: "1";
-		padding-top: 5px;
-		padding-left: 8px;		
-	}
+  @media (min-width: 768px) {
+    // How we work
+    margin-bottom: 25px;
+    // Freelance
+    &--m--8-15 {
+      margin-top: -8px;
+      margin-bottom: 15px;
+    }
+    // Startup hosting
+    &--m-20-15 {
+      margin-top: 20px;
+      margin-bottom: 15px;
+    }
+    // Prices
+    &--mb-10 {
+      margin-bottom: 10px;
+    }
+  }
+  @media (min-width: 992px) {
+    line-height: 0px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+  }
+  @media (min-width: 1200px) {
+    font-size: 38px;
+    // How we work
+    &--mb-60 {
+      margin-bottom: 60px;
+    }
+    // Freelance
+    &--mtp-43 {
+      margin-top: 43px;
+      margin-bottom: 43px;
+    }
+    // Startup
+    &--m-40-43 {
+      margin-top: 40px;
+      margin-bottom: 43px;
+    }
+    // Prices
+    &--mb-53 {
+      margin-bottom: 53px;
+    }
+  }
 
-	&--number-2:before {
-		content: "2";
-		padding-top: 5px;
-		padding-left: 9px;		
-	}	
+  &--number:before {
+    height: 26px;
+    width: 26px;
+    display: block;
+    -webkit-border-radius: 13px;
+    border-radius: 13px;
+    background-color: @orange;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1;
+
+    position: absolute;
+    left: -13px;
+    top: -39px;
+
+    @media (min-width: 992px) {
+      top: -55px;
+    }
+
+    @media (min-width: 1200px) {
+      left: -32px;
+      top: -42px;
+    }
+  }
+
+  &--number-1:before {
+    content: "1";
+    padding-top: 5px;
+    padding-left: 8px;
+  }
+
+  &--number-2:before {
+    content: "2";
+    padding-top: 5px;
+    padding-left: 9px;
+  }
 }

@@ -1,51 +1,61 @@
 .logo {
-	text-align: center;
-	padding-top: 74px;
-	padding-bottom: 38px;
-	text-transform: uppercase;
-	
-	@media (min-width: 768px) {
-		padding-top: 98px;
-		padding-bottom: 38px;
-	}
+  text-align: center;
+  padding-top: 74px;
+  padding-bottom: 38px;
+  text-transform: uppercase;
 
-	@media (min-width: 992px) {
-		padding-top: 40px;
-		padding-bottom: 48px;
-	}
-		
-	@media (min-width: 1200px) {
-		padding-top: 17px;
-		padding-bottom: 48px;
-	}
-	
-	&__name {
-		color: #000;
-		font-size: 33px;
-		line-height: 1.38;
-		letter-spacing: 7.6px;
-		font-weight: 700;
-		margin-top: 25px;
-		
-		@media (min-width: 768px) {margin-top: 0;}
-		@media (min-width: 1200px) {
-			font-size: 38px;
-			letter-spacing: 9.5px;
-			line-height: 1.5;
-			margin-top: 27px;
-		}
-	}
-	
-	&__slogan {
-		color: #a1bbd9;
-		font-size: 14px;
-		line-height: 1;
-		letter-spacing: 8.3px;
-		font-weight: 700;
-			
-		@media (min-width: 1200px) {
-			font-size: 16px;
-			letter-spacing: 10.3px;		
-		}
-	}
+  @media (min-width: 768px) {
+    padding-top: 98px;
+    padding-bottom: 38px;
+  }
+
+  @media (min-width: 992px) {
+    padding-top: 40px;
+    padding-bottom: 48px;
+  }
+
+  @media (min-width: 1200px) {
+    padding-top: 17px;
+    padding-bottom: 48px;
+  }
+
+  &__name {
+    color: #000;
+    font-size: 33px;
+    line-height: 1.38;
+    letter-spacing: 0.23em;
+    font-weight: 700;
+    margin-top: 25px;
+
+    @media (min-width: 768px) {
+      margin-top: 0;
+    }
+    @media (min-width: 992px) {
+      font-size: 38px;
+      letter-spacing: 0.25em;
+    }
+    @media (min-width: 1200px) {
+      font-size: 38px;
+      letter-spacing: 9.5px;
+      line-height: 1.5;
+      margin-top: 27px;
+    }
+  }
+
+  &__slogan {
+    color: #a1bbd9;
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: 0.593em;
+    font-weight: 700;
+
+    @media (min-width: 992px) {
+      font-size: 16px;
+      letter-spacing: 0.65em;
+    }
+    @media (min-width: 1200px) {
+      font-size: 16px;
+      letter-spacing: 10.3px;
+    }
+  }
 }
