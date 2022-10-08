@@ -57,9 +57,9 @@
     position: absolute;
     width: 72px;
     height: 72px;
-    background-repeat: no-repeat; /*это св-во можно было не указывать */
-    background-position: left top; /*это св-во можно было не указывать */
-    /*font-size: 0;  можно было так сбросить текст внутри кнопок(1-й вариант). 2-й вариант сброса: в файле main.js установить св-во: navigationText: ['', ''] */
+    background-repeat: no-repeat; /*this holy could not be indicated */
+    background-position: left top; /*this holy could not be indicated */
+    /*font-size: 0;  It was possible to reset the text inside the buttons (1st option).2nd dump version: In the Main.js file, install St.: navigationText: ['', ''] */
     top: 50%;
     margin-top: -25px;
   }

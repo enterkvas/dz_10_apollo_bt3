@@ -45,7 +45,7 @@
       text-decoration: none;
 
       &:hover {
-        color: @orange;
+        color: var(--default-orange);
         text-decoration: none;
       }
     }

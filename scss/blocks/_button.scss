@@ -15,16 +15,16 @@
   &:hover,
   &:active,
   &:focus {
-    background-color: @orange;
+    background-color: var(--default-orange);
     color: #fff;
     text-decoration: none;
   }
 }
 .button--orange {
-  background-color: @orange;
+  background-color: var(--default-orange);
   padding: 14px 28px;
 }
-// Кнопка "вверх":
+// Button "Up":
 .btn_up {
   position: fixed;
   bottom: -50px;
@@ -35,7 +35,7 @@
   border: 2px solid #ccc;
   background: #16385f;
   z-index: 100;
-  outline: 0 !important;
+  outline: 0 !important;  
 
   &:after {
     content: "";

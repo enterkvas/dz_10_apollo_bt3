@@ -11,28 +11,28 @@ $(document).ready(function () {
 	var menu = $('.menu__list'),
 			pull = $('#navigation-toggle'),
 			anchor = $('.navigation a');
-	// Скрипт для показа и скрытия выпадающего меню на смартфонах
-	// Создаем переменные для кнопки, меню и ссылки:		
-	// Описываем событие при нажатии на кнопку бургера
+	// Script for showing and hiding the drop -down menu on smartphones
+	// Create variables for the button, menu and links:		
+	// We describe the event when pressing the Burger button
 	$(pull).on("click", function (e) {
-		// Отменяем стандартное поведение ссылки в браузере
+		// We cancel the standard behavior in the browser
 		e.preventDefault();		
-		// Открываем/Скрываем меню
+		// Open/hide the menu
 		menu.slideToggle();		
-		// Добавляем модификатор --active
+		// Add the modifier --active
 		$(this).toggleClass('navigation__toggle-button--active');
 		$('body').animate({ scrollTop: 0 }, 1000);
 		$('html').animate({ scrollTop: 0 }, 1000);		
 	});
 
-	// Скрываем меню на смартфоне и планшете при клике на пункты в выпадающем меню
-	// По клику на ссылку в меню запускаем ф-ю fnstart();
+	// In the drop -down menu
+	// By clicking on the link in the menu, launch F-F-FNSTART (); hide the menu on the smartphone and tablet when clicking on points 
 	anchor.on("click", function () {
 		fnstart();
 	});
-	// В ф-ии fnstart(); проверяем - если меню открыто (проверяем по наличию класса --active у кнопки pull)
-	// тогда убираем класс модификатор --active у кнопки pull(который задает темно-синий фон кнопке)
-	// и сворачиваем/скрываем меню 
+	// In f-fnstart ();Check -if the menu is openly (check for the presence of class --active at the Pull button)
+	// Then we remove the class-the Modifier -Active class from the Pull button (which sets the dark blue background button)
+	// and turn/hide the menu 
 	function fnstart() {
 		if (pull.hasClass("navigation__toggle-button--active")) {
 			pull.toggleClass('navigation__toggle-button--active');
@@ -40,30 +40,30 @@ $(document).ready(function () {
 		}
 	};
 
-	// Этот скрипт должен работать для текста нижеуказанного при ЗАГРУЗКЕ стр:
+	// This script should work for the text below when loading st.
 	var w = $(window).width();
 	if (w > 991) {
-		$('#change_text_1200').html('<div id="change_text_1200" class="slider__slogan">Разместите свое портфолио и сайты<br> клиентов. Надежные сервера,<br> отзывчивая техподдержка.</div>');
+		$('#change_text_1200').html('<div id="change_text_1200" class="slider__slogan">Place your portfolio and sites <br> customers.Reliable servers, <br> responsive technical support.</div>');
 	} else {
-		$('#change_text_1200').html('<div id="change_text_1200" class="slider__slogan">Разместите свое портфолио и сайты клиентов. Надежные сервера,<br> отзывчивая техподдержка.</div>');
+		$('#change_text_1200').html('<div id="change_text_1200" class="slider__slogan">Place your portfolio and customer sites.Reliable servers, <br> responsive technical support.</div>');
 	}	
-	// При изменении размера окна, в большую сторону, если меню было скрыто, показываем его
-	// И у кнопки убираем модификатор --active	
+	// When the window size changes, in the larger direction, if the menu was hidden, show it
+	// And from the button we remove the modifier --active	
 	$(window).resize(function () {		
 		if (w > 991) {
 			menu.removeAttr('style');
 			pull.removeClass('navigation__toggle-button--active');
-			// Этот скрипт должен работать для текста нижеуказанного при ИЗМЕНЕНИИ ШИРИНЫ окна:			
-			$('#change_text_1200').html('<div id="change_text_1200" class="slider__slogan">Разместите свое портфолио и сайты<br> клиентов. Надежные сервера,<br> отзывчивая техподдержка.</div>');
-			// Убираем отступы сверху (нужны были для w<992px)
+			// This script should work for the text below when the window width changes:			
+			$('#change_text_1200').html('<div id="change_text_1200" class="slider__slogan">Place your portfolio and sites <br> customers.Reliable servers, <br> responsive technical support.</div>');
+			// We remove the indentations from above (we needed for w<992px)
 			$('.prices').css('margin-top', '0px');
 			$('.benefits').css('margin-top', '0px');
 		} else {
-			$('#change_text_1200').html('<div id="change_text_1200" class="slider__slogan">Разместите свое портфолио и сайты клиентов. Надежные сервера,<br> отзывчивая техподдержка.</div>');
+			$('#change_text_1200').html('<div id="change_text_1200" class="slider__slogan">Place your portfolio and customer sites.Reliable servers, <br> responsive technical support.</div>');
 		};		
 	});	
 
-	// Вызов слайдера owl-carousel
+	// Calling the slider owl-carousel
 
 	$("#top-slider").owlCarousel({
 		singleItem: true,
@@ -73,12 +73,12 @@ $(document).ready(function () {
 		slideSpeed: 600
 	});
 
-	//slide2id - плавная прокрутка по ссылкам внутри страницы (ниже сделал на нативном js Этот скрипт тоже рабочий, только на jQuery)
+	//slide2id - smooth scrolling from the links inside the page (I made this script also a worker on the native js, only on jQuery)
 	// $("nav a,a[href='#top'],a[rel='m_PageScroll2id'],a.PageScroll2id").mPageScroll2id({
 	// 	highlightSelector: "nav a"
 	// });
 
-// Кнопка вверх (.btn_up)
+// Button up (.btn_up)
 	$('body').append('<div title="Наверх"><button class="btn_up"></button></div>');
 
 	$('.btn_up').click(function () {
@@ -101,7 +101,7 @@ $(document).ready(function () {
 
 //=======================//
 
-// Код нативного js плавная прокрутка по ссылкам внутри страницы
+// Native JS code smooth scrolling by links inside the page
 
 "use strict";
 const menuLinks = document.querySelectorAll('.menu__link[data-goto]');
@@ -117,9 +117,9 @@ if (menuLinks.length > 0) {
 
 			window.scrollTo({
 				top: gotoBlockValue,
-				behavior: "smooth" /* указывает ПЛАВНУЮ прокрутку */
+				behavior: "smooth" /* Indicates smooth scrolling */
 			});
-			e.preventDefault(); /* отменяем стандартное поведение ссылки */			
+			e.preventDefault(); /* We cancel the standard link behavior */			
 		}		
 	}	
 }

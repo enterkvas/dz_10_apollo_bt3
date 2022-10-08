@@ -113,16 +113,16 @@
             color: #ffcc00;
           }
         }
-      } // a
+      } 
 
       a.selected {
         @media (min-width: 992px) {
           color: #ffcc00;
         }
       }
-    } // li
-  } // ul
-} // nav
+    }
+  }
+}
 
 .container--mobile--no-padding {
   padding-left: 0;
