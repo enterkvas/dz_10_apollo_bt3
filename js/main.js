@@ -1,12 +1,3 @@
-jQuery.event.special.touchstart = {
-  setup: function( _, ns, handle ){
-    if ( ns.includes("noPreventDefault") ) {
-      this.addEventListener("touchstart", handle, { passive: false });
-    } else {
-      this.addEventListener("touchstart", handle, { passive: true });
-    }
-  }
-};
 $(document).ready(function () {
 	var menu = $('.menu__list'),
 			pull = $('#navigation-toggle'),
@@ -20,7 +11,7 @@ $(document).ready(function () {
 		// Open/hide the menu
 		menu.slideToggle();		
 		// Add the modifier --active
-		$(this).toggleClass('navigation__toggle-button--active');
+		$(this).toggleClass('navigation__toggle-button--active');    
 		$('body').animate({ scrollTop: 0 }, 1000);
 		$('html').animate({ scrollTop: 0 }, 1000);		
 	});
@@ -43,7 +34,7 @@ $(document).ready(function () {
 	// This script should work for the text below when loading st.
 	var w = $(window).width();
 	if (w > 991) {
-		$('#change_text_1200').html('<div id="change_text_1200" class="slider__slogan">Place your portfolio and sites <br> customers.Reliable servers, <br> responsive technical support.</div>');
+		$('#change_text_1200').html('<div id="change_text_1200" class="slider__slogan">Place your portfolio and sites customers.<br> Reliable servers, responsive technical support.</div>');
 	} else {
 		$('#change_text_1200').html('<div id="change_text_1200" class="slider__slogan">Place your portfolio and customer sites.Reliable servers, <br> responsive technical support.</div>');
 	}	
@@ -54,7 +45,7 @@ $(document).ready(function () {
 			menu.removeAttr('style');
 			pull.removeClass('navigation__toggle-button--active');
 			// This script should work for the text below when the window width changes:			
-			$('#change_text_1200').html('<div id="change_text_1200" class="slider__slogan">Place your portfolio and sites <br> customers.Reliable servers, <br> responsive technical support.</div>');
+			$('#change_text_1200').html('<div id="change_text_1200" class="slider__slogan">Place your portfolio and sites customers.Reliable servers, <br> responsive technical support.</div>');
 			// We remove the indentations from above (we needed for w<992px)
 			$('.prices').css('margin-top', '0px');
 			$('.benefits').css('margin-top', '0px');

@@ -15,13 +15,15 @@
   &:hover,
   &:active,
   &:focus {
-    background-color: var(--default-orange);
+    background-color: $default-orange;
+    // background-color: var(--default-orange);
     color: #fff;
     text-decoration: none;
   }
 }
 .button--orange {
-  background-color: var(--default-orange);
+  background-color: $default-orange;
+  // background-color: var(--default-orange);
   padding: 14px 28px;
 }
 // Button "Up":

@@ -20,12 +20,13 @@
   }
 
   &__name {
+    margin-top: 25px;
+    padding-left: 0.1em;
     color: #000;
     font-size: 33px;
     line-height: 1.38;
     letter-spacing: 0.21em;
-    font-weight: 700;
-    margin-top: 25px;
+    font-weight: 700;    
 
     @media (min-width: 768px) {
       margin-top: 0;
@@ -46,7 +47,7 @@
     color: #a1bbd9;
     font-size: 14px;
     line-height: 1;
-    letter-spacing: 0.593em;
+    letter-spacing: 0.7em;
     font-weight: 700;
 
     @media (min-width: 992px) {

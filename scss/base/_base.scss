@@ -43,6 +43,38 @@ h3,
   height: 80px;
 }
 
+.container--mobile--no-padding {
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+
+  @media (min-width: 992px) {
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 970px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 1170px;
+  }
+}
+
+.container--mobile--no-padding {
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+
+  @media (min-width: 992px) {
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 970px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 1170px;
+  }
+}
+
 /* Pseudo-elements, an allocation from above for links-yakores of the navigation unit.This code does not work, apparently.Just in case, he left him.But he solved the problems with retreats after scrolling in the Main.js file (below) with the right js */
 // #freelance:before, #startup:before, #price:before, #footer:before {
 // 	display: block;
