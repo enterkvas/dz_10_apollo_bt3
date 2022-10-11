@@ -32,12 +32,12 @@ $(document).ready(function () {
 	};
 
 	// This script should work for the text below when loading st.
-	// var w = $(window).width();
-	// if (w > 991) {
-	// 	$('#change_text_1200').html('<div id="change_text_1200" class="slider__slogan">Place your portfolio and sites customers. Reliable servers, responsive technical support.</div>');
-	// } else {
-	// 	$('#change_text_1200').html('<div id="change_text_1200" class="slider__slogan">Place your portfolio and customer sites. Reliable servers, responsive technical support.</div>');
-	// }	
+	var w = $(window).width();
+	if (w > 991) {
+		$('#change_text_1200').html('<div id="change_text_1200" class="slider__slogan">Place your portfolio and sites customers. Reliable servers, responsive technical support.</div>');
+	} else {
+		$('#change_text_1200').html('<div id="change_text_1200" class="slider__slogan">Place your portfolio and customer sites. Reliable servers, responsive technical support.</div>');
+	}	
 	// When the window size changes, in the larger direction, if the menu was hidden, show it
 	// And from the button we remove the modifier --active	
 	$(window).resize(function () {		
