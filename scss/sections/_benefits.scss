@@ -3,7 +3,9 @@
   padding-bottom: 50px;
   border-bottom: 1px solid #eaeff5;
 
-  &__row {margin-top: 30px;}
+  &__row {    
+    margin-top: 45px;
+  }
   &__col {margin-bottom: 40px;}
   &__col:last-child {margin-bottom: 0px;}
 
@@ -22,9 +24,3 @@
     padding-bottom: 52px;
   }  
 }
-// #benefits:before {
-//   display: block;
-//   content: "";
-//   height: 55px;
-//   margin: -25px 0 0;
-// }

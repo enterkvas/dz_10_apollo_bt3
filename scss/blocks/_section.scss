@@ -1,33 +1,34 @@
-.section {
-  @media (min-width: 768px) {
+// .section {
+  // @media (min-width: 768px) {
     // Freelance hosting sm & md
-    &--p-80-50 {
-      padding-top: 80px;
-      padding-bottom: 50px;
-    }
+    // &--p-80-50 {
+    //   padding-top: 80px;
+    //   padding-bottom: 50px;
+    // }
     // Startup hosting xs
-    &--p-50-50 {
-      padding-top: 50px;
-      padding-bottom: 50px;
-    }
-  }
+  //   &--p-50-50 {
+  //     padding-top: 50px;
+  //     padding-bottom: 50px;
+  //   }
+  // }
 
-  @media (min-width: 992px) {
-    &--p-0-60 {
-      padding-top: 60px;
-      padding-bottom: 0;
-    }
-  }
+  // @media (min-width: 992px) {
+  //   &--p-0-60 {
+  //     padding-top: 60px;
+  //     padding-bottom: 0;
+  //   }
+  // }
 
-  @media (min-width: 1200px) {
-    // Freelance
-    padding-top: 70px;
-    padding-bottom: 87px;
+  // @media (min-width: 1200px) {
+  //   // Freelance
+  //   padding-top: 70px;
+  //   padding-bottom: 87px;
 
     // Startup hosting
-    &--p-70-98 {
-      padding-top: 70px;
-      padding-bottom: 98px;
-    }
-  }
-}
+//     &--p-70-98 {
+//       padding-top: 70px;
+//       padding-bottom: 98px;
+//     }
+//   }
+// }
+// .mb20 {margin-bottom: 20px;}

@@ -1,23 +1,24 @@
 // BASE and LIBS
-@import "base/_variables.scss";
-@import "base/_utils.scss";
+@import "base/_variables";
+@import "base/_utils";
+@import "base/_gridLayout";
 
 // General
-@import "base/_base.scss";
+@import "base/_base";
 
 // Blocks
-@import "blocks/_heading.scss";
-@import "blocks/_section.scss";
-@import "blocks/_top-slider-theme.scss";
-@import "blocks/_button.scss";
-@import "blocks/_package.scss";
-@import "blocks/_benefit-block.scss";
+@import "blocks/_heading";
+@import "blocks/_section";
+@import "blocks/_top-slider-theme";
+@import "blocks/_button";
+@import "blocks/_package";
+@import "blocks/_benefit-block";
 
 // Sections
-@import "sections/_logo.scss";
-@import "sections/_navigation.scss";
-@import "sections/_prices.scss";
-@import "sections/_slider.scss";
-@import "sections/_benefits.scss";
-@import "sections/_service-description.scss";
-@import "sections/_footer.scss";
+@import "sections/_logo";
+@import "sections/_navigation";
+@import "sections/_prices";
+@import "sections/_slider";
+@import "sections/_benefits";
+@import "sections/_service-description";
+@import "sections/_footer";
