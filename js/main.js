@@ -2,7 +2,7 @@ $(document).ready(function () {
 	var menu = $('.menu__list'),
 			pull = $('#navigation-toggle'),
 			anchor = $('.navigation a');
-	// Script for showing and hiding the drop -down menu on smartphones
+	// Script for showing and hiding the drop-down menu on smartphones
 	// Create variables for the button, menu and links:		
 	// We describe the event when pressing the Burger button
 	$(pull).on("click", function (e) {
@@ -12,17 +12,17 @@ $(document).ready(function () {
 		menu.slideToggle();		
 		// Add the modifier --active
 		$(this).toggleClass('navigation__toggle-button--active');    
-		$('body').animate({ scrollTop: 0 }, 1000);
-		$('html').animate({ scrollTop: 0 }, 1000);		
+		$('body').animate({ scrollTop: 30 }, 1000);
+		$('html').animate({ scrollTop: 30 }, 1000);		
 	});
 
-	// In the drop -down menu
-	// By clicking on the link in the menu, launch F-F-FNSTART (); hide the menu on the smartphone and tablet when clicking on points 
+	// In the drop-down menu
+	// By clicking on the link in the menu, launch fnstart(); hide the menu on the smartphone and tablet when clicking on points 
 	anchor.on("click", function () {
 		fnstart();
 	});
 	// In f-fnstart ();Check -if the menu is openly (check for the presence of class --active at the Pull button)
-	// Then we remove the class-the Modifier -Active class from the Pull button (which sets the dark blue background button)
+	// Then we remove the modifier --active from the pull button (which sets the dark blue background button)
 	// and turn/hide the menu 
 	function fnstart() {
 		if (pull.hasClass("navigation__toggle-button--active")) {
@@ -65,9 +65,9 @@ $(document).ready(function () {
 	});
 
 	//slide2id - smooth scrolling from the links inside the page (I made this script also a worker on the native js, only on jQuery)
-	// $("nav a,a[href='#top'],a[rel='m_PageScroll2id'],a.PageScroll2id").mPageScroll2id({
-	// 	highlightSelector: "nav a"
-	// });
+	$("nav a,a[href='#top'],a[rel='m_PageScroll2id'],a.PageScroll2id").mPageScroll2id({
+		highlightSelector: "nav a"
+	});
 
 // Button up (.btn_up)
 	$('body').append('<div title="Наверх"><button class="btn_up"></button></div>');

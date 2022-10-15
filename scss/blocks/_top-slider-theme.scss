@@ -85,10 +85,9 @@
 }
 
 .owl-pagination {
-  position: absolute;
-  // bottom: 0;
+  position: absolute; 
   width: 100%;
-  bottom: -91px;
+  bottom: -62px;
 
   @media (min-width: 768px) {
     bottom: -72px;
