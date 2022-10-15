@@ -135,7 +135,7 @@ h3,
 /* Pseudo-elements, an allocation from above for links-yakores of the navigation unit.This code does not work, apparently.Just in case, he left him.But he solved the problems with retreats after scrolling in the Main.js file (below) with the right js */
 .heading {
   font-size: 28px;
-  line-height: 1;
+  line-height: 1.3571428571;
   font-weight: 700;
   letter-spacing: -0.5px;
   position: relative;
@@ -146,13 +146,13 @@ h3,
   display: block;
   -webkit-border-radius: 13px;
   border-radius: 13px;
-  background-color: var(--default-orange);
+  background-color: #ffc80a;
   color: #fff;
   font-size: 15px;
   font-weight: 700;
   line-height: 1;
   position: absolute;
-  left: -13px;
+  left: -11px;
   top: -39px;
 }
 @media (min-width: 992px) {
@@ -169,7 +169,7 @@ h3,
 .heading--number-1:before {
   content: "1";
   padding-top: 5px;
-  padding-left: 8px;
+  padding-left: 9px;
 }
 .heading--number-2:before {
   content: "2";
@@ -468,6 +468,85 @@ h3,
 @media (min-width: 1200px) {
   .benefit-block__text {
     width: 100%;
+  }
+}
+
+.service-description__img {
+  position: relative;
+}
+.service-description__img--tablet {
+  margin-top: 40px;
+}
+@media (min-width: 768px) {
+  .service-description__img--tablet {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+}
+@media (min-width: 1200px) {
+  .service-description__img--tablet {
+    position: absolute;
+    right: 80px;
+  }
+}
+.service-description__img--rocket {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+@media (min-width: 768px) {
+  .service-description__img--rocket {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+}
+@media (min-width: 1200px) {
+  .service-description__img--rocket {
+    position: absolute;
+    left: 37px;
+  }
+}
+.service-description__content {
+  font-size: 14px;
+  line-height: 24px;
+  color: #777;
+  width: 98%;
+  margin-top: 15px;
+}
+.service-description__content p {
+  margin-top: 0px;
+  margin-bottom: 22px;
+}
+@media (min-width: 1200px) {
+  .service-description__content {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .service-description__content p {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.service-description__button-arrow {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-image: url("../img/icons/arrow-orange.png");
+  background-repeat: no-repeat;
+  background-position: left top;
+  margin-top: -7px;
+  margin-bottom: 50px;
+}
+@media (min-width: 768px) {
+  .service-description__button-arrow {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+}
+@media (min-width: 1200px) {
+  .service-description__button-arrow {
+    margin-top: 2px;
+    margin-left: 0;
+    margin-top: 26px;
   }
 }
 
@@ -780,12 +859,12 @@ h3,
 }
 
 .benefits {
-  padding-top: 40px;
+  padding-top: 35px;
   padding-bottom: 50px;
   border-bottom: 1px solid #eaeff5;
 }
 .benefits__row {
-  margin-top: 45px;
+  margin-top: 40px;
 }
 .benefits__col {
   margin-bottom: 40px;
@@ -808,88 +887,6 @@ h3,
   .benefits {
     padding-top: 70px;
     padding-bottom: 52px;
-  }
-}
-
-.service-description {
-  border-bottom: 1px solid #eaeff5;
-}
-.service-description__img {
-  position: relative;
-}
-.service-description__img--tablet {
-  margin-top: 40px;
-}
-@media (min-width: 768px) {
-  .service-description__img--tablet {
-    margin-top: 0px;
-    margin-bottom: 0px;
-  }
-}
-@media (min-width: 1200px) {
-  .service-description__img--tablet {
-    position: absolute;
-    right: 80px;
-  }
-}
-.service-description__img--rocket {
-  margin-top: 50px;
-  margin-bottom: 30px;
-}
-@media (min-width: 768px) {
-  .service-description__img--rocket {
-    margin-top: 0px;
-    margin-bottom: 0px;
-  }
-}
-@media (min-width: 1200px) {
-  .service-description__img--rocket {
-    position: absolute;
-    left: 37px;
-  }
-}
-.service-description__content {
-  font-size: 14px;
-  line-height: 24px;
-  color: #777;
-  width: 98%;
-  margin-top: 15px;
-}
-.service-description__content p {
-  margin-top: 0px;
-  margin-bottom: 22px;
-}
-@media (min-width: 1200px) {
-  .service-description__content {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .service-description__content p {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-.service-description__button-arrow {
-  display: block;
-  width: 40px;
-  height: 40px;
-  background-image: url("../img/icons/arrow-orange.png");
-  background-repeat: no-repeat;
-  background-position: left top;
-  margin-top: -7px;
-  margin-bottom: 50px;
-}
-@media (min-width: 768px) {
-  .service-description__button-arrow {
-    margin-top: 0px;
-    margin-bottom: 0px;
-  }
-}
-@media (min-width: 1200px) {
-  .service-description__button-arrow {
-    margin-top: 2px;
-    margin-left: 0;
-    margin-top: 26px;
   }
 }
 
@@ -951,4 +948,12 @@ h3,
 }
 .footer .copyright p {
   padding: 0;
+}
+
+.freelance {
+  border-bottom: 1px solid #eaeff5;
+}
+
+.startup {
+  border-bottom: 1px solid #eaeff5;
 }/*# sourceMappingURL=main.css.map */
