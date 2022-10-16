@@ -1,5 +1,5 @@
 .prices {
-  padding-top: 29px;
+  padding-top: 30px;
   padding-bottom: 50px;
 
   @media (min-width: 768px) {
@@ -16,11 +16,11 @@
     padding-bottom: 90px;
   }
 
-  &__subtitle-text {
+  &__subtitle {
     font-size: 14px;
     line-height: 24px;
     color: #777;
-    margin: 10px 20px 37px;
+    margin: 10px 10px 37px;
 
     @media (min-width: 768px) {
       width: 75%;
