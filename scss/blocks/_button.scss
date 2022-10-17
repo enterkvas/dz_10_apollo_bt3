@@ -27,27 +27,27 @@
   padding: 14px 28px;
 }
 // Button "Up":
-.btn_up {
+.btn-up {
   position: fixed;
   bottom: -50px;
   right: 15px;
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  border: 2px solid #ccc;
-  background: #16385f;
+  border: 4px solid $default-orange;
+  background-color: transparent;
   z-index: 100;
   outline: 0 !important;  
 
   &:after {
     content: "";
-    width: 10px;
-    height: 10px;
-    border-top: 2px solid #ccc;
-    border-right: 2px solid #ccc;
+    width: 15px;
+    height: 15px;
+    border-top: 4px solid $default-orange;
+    border-right: 4px solid $default-orange;
     transform: rotate(-45deg);
     position: absolute;
-    top: 4px;
+    top: 6px;
     bottom: 0;
     left: 0;
     right: 0;

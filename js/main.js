@@ -1,116 +1,81 @@
 $(document).ready(function () {
-	var menu = $('.menu__list'),
-			pull = $('#navigation-toggle'),
-			anchor = $('.navigation a');
-	// Script for showing and hiding the drop-down menu on smartphones
-	// Create variables for the button, menu and links:		
-	// We describe the event when pressing the Burger button
-	$(pull).on("click", function (e) {
-		// We cancel the standard behavior in the browser
-		e.preventDefault();		
-		// Open/hide the menu
-		menu.slideToggle();		
-		// Add the modifier --active
-		$(this).toggleClass('navigation__toggle-button--active');    
-		$('body').animate({ scrollTop: 30 }, 1000);
-		$('html').animate({ scrollTop: 30 }, 1000);		
-	});
+  // Скрипт для показа и скрытия выпадающего меню на смартфонах
+  // Создаем переменые для кнопки, меню и ссылки:
+  var pull = $('#navigation-toggle'),
+    menu = $('.navigation ul'),
+    anchor = $('.menu__link');
+  // Описываем событие при нажатии на кнопку меню (вся панель
+  // навигации, а не только кнопка бургера):
+  $(pull).on("click", function (e) {
+    // Отменяем стандартное поведение ссылки в браузере
+    e.preventDefault();
+    // Открываем/Скрываем меню
+    menu.slideToggle();
+    // Добавляем модификатор --active (добавляет/
+    // удаляет темно-синий цветв кнопки меню)
+    $(this).toggleClass('navigation__toggle-button--active');
+    // Возвращает на начало стр при нажатии на бургер
+    // если не находились в начале стр:	
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+  // При изменении размера окна в большую сторону, если меню было скрыто, показываем его
+  // И у кнопки убираем модификатор --active
+  $(window).resize(function () {
+    var w = $(window).width();
+    if (w > 991) {
+      menu.removeAttr('style');
+      pull.removeClass('navigation__toggle-button--active');
+    };
+  });
+  //Скрываем меню при клике на пункт списка меню
+  // на смартфоне и планцете.
+  //По клику на ссылку в меню запускаем ф-ю fnstart();
+  anchor.on("click", function () {
+    fnstart();
+  });
+  // В ф-ии fnstart(); проверяем - если меню открыто (проверяем 
+  // по наличию класса --active у кнопки pull) тогда убираем
+  // класс модификатор --active у кнопки pull(который задает
+  // темно-синий фон кнопке) и сворачиваем/скрываем меню 
+  function fnstart() {
+    if (pull.hasClass("navigation__toggle-button--active")) {
+      pull.toggleClass('navigation__toggle-button--active');
+      menu.slideToggle();      
+    }
+  };
+  // Плавная прокрутка при нажатии на пункты меню
+  $("a.menu__link").click(function () {
+    $("html, body").animate({
+      scrollTop: $($(this).attr("href")).offset().top - 68
+    }, {
+      duration: 1000,
+      easing: "swing"
+    });    
+    return false;
+  });
 
-	// In the drop-down menu
-	// By clicking on the link in the menu, launch fnstart(); hide the menu on the smartphone and tablet when clicking on points 
-	anchor.on("click", function () {
-		fnstart();
-	});
-	// In f-fnstart ();Check -if the menu is openly (check for the presence of class --active at the Pull button)
-	// Then we remove the modifier --active from the pull button (which sets the dark blue background button)
-	// and turn/hide the menu 
-	function fnstart() {
-		if (pull.hasClass("navigation__toggle-button--active")) {
-			pull.toggleClass('navigation__toggle-button--active');
-			menu.slideToggle();
-		}
-	};
+  // Вызов слайдера owl-carousel
+  $("#top-slider").owlCarousel({
+    singleItem: true,
+    navigation: true,
+    theme: "top-slider-theme",
+    navigationText: ["", ""],
+    slideSpeed: 600
+  });
 
-	// This script should work for the text below when loading st.
-	var w = $(window).width();
-	if (w > 991) {
-		$('#change_text_1200').html('<div id="change_text_1200" class="slider__slogan">Place your portfolio and sites customers. Reliable servers, responsive technical support.</div>');
-	} else {
-		$('#change_text_1200').html('<div id="change_text_1200" class="slider__slogan">Place your portfolio and customer sites. Reliable servers, responsive technical support.</div>');
-	}	
-	// When the window size changes, in the larger direction, if the menu was hidden, show it
-	// And from the button we remove the modifier --active	
-	$(window).resize(function () {		
-		if (w > 991) {
-			menu.removeAttr('style');
-			pull.removeClass('navigation__toggle-button--active');
-			// This script should work for the text below when the window width changes:			
-			$('#change_text_1200').html('<div id="change_text_1200" class="slider__slogan">Place your portfolio and sites customers.Reliable servers, <br> responsive technical support.</div>');
-			// We remove the indentations from above (we needed for w<992px)
-			$('.prices').css('margin-top', '0px');
-			$('.benefits').css('margin-top', '0px');
-		} else {
-			$('#change_text_1200').html('<div id="change_text_1200" class="slider__slogan">Place your portfolio and customer sites.Reliable servers, <br> responsive technical support.</div>');
-		};		
-	});	
+});
+// Кнопка вверх (.btn-up)
+$('body').append('<button class="btn-up" />');
 
-	// Calling the slider owl-carousel
-
-	$("#top-slider").owlCarousel({
-		singleItem: true,
-		navigation: true,
-		theme: "top-slider-theme",
-		navigationText: ["", ""],
-		slideSpeed: 600
-	});
-
-	//slide2id - smooth scrolling from the links inside the page (I made this script also a worker on the native js, only on jQuery)
-	$("nav a,a[href='#top'],a[rel='m_PageScroll2id'],a.PageScroll2id").mPageScroll2id({
-		highlightSelector: "nav a"
-	});
-
-// Button up (.btn_up)
-	$('body').append('<div title="Наверх"><button class="btn_up"></button></div>');
-
-	$('.btn_up').click(function () {
-		if (pull.hasClass("navigation__toggle-button--active")) {
-			pull.toggleClass('navigation__toggle-button--active');
-			menu.slideToggle();
-		}
-		$('body').animate({ scrollTop: 0 }, 1000);
-		$('html').animate({ scrollTop: 0 }, 1000);	
-	});
-
-	$(window).scroll(function () {	
-		if ($(window).scrollTop() > 200) {
-			$('.btn_up').addClass('active');
-		} else {
-			$('.btn_up').removeClass('active');
-		}
-	});
+$('.btn-up').click(function () {
+  $('body').animate({ scrollTop: 0 }, 1000);
+  $('html').animate({ scrollTop: 0 }, 1000);
 });
 
-//=======================//
-
-// Native JS code smooth scrolling by links inside the page
-
-"use strict";
-const menuLinks = document.querySelectorAll('.menu__link[data-goto]');
-if (menuLinks.length > 0) {
-	menuLinks.forEach(menuLink => {
-		menuLink.addEventListener("click", onMenuLinkClick);
-	});
-	function onMenuLinkClick(e) {
-		const menuLink = e.target;		
-		if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)){
-			const gotoBlock = document.querySelector(menuLink.dataset.goto);
-			const gotoBlockValue = gotoBlock.getBoundingClientRect().top - document.querySelector('.heading').offsetHeight;				
-
-			window.scrollTo({
-				top: gotoBlockValue,
-				behavior: "smooth" /* Indicates smooth scrolling */
-			});
-			e.preventDefault(); /* We cancel the standard link behavior */			
-		}		
-	}	
-}
+$(window).scroll(function () {
+  if ($(window).scrollTop() > 200) {
+    $('.btn-up').addClass('active');
+  } else {
+    $('.btn-up').removeClass('active');
+  }
+});

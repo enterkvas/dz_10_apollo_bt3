@@ -65,6 +65,24 @@ textarea {
   clear: both;
 }
 
+.container--mobile--no-padding {
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+}
+@media (min-width: 992px) {
+  .container--mobile--no-padding {
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container--mobile--no-padding {
+    width: 1170px;
+  }
+}
+
 .mt-10 {
   margin-top: -10px;
 }
@@ -112,24 +130,6 @@ h3,
 .worker {
   width: 100%;
   height: 80px;
-}
-
-.container--mobile--no-padding {
-  padding-left: 0;
-  padding-right: 0;
-  width: 100%;
-}
-@media (min-width: 992px) {
-  .container--mobile--no-padding {
-    padding-left: 15px;
-    padding-right: 15px;
-    width: 970px;
-  }
-}
-@media (min-width: 1200px) {
-  .container--mobile--no-padding {
-    width: 1170px;
-  }
 }
 
 /* Pseudo-elements, an allocation from above for links-yakores of the navigation unit.This code does not work, apparently.Just in case, he left him.But he solved the problems with retreats after scrolling in the Main.js file (below) with the right js */
@@ -305,49 +305,49 @@ h3,
   padding: 14px 28px;
 }
 
-.btn_up {
+.btn-up {
   position: fixed;
   bottom: -50px;
   right: 15px;
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  border: 2px solid #ccc;
-  background: #16385f;
+  border: 4px solid #ffc80a;
+  background-color: transparent;
   z-index: 100;
   outline: 0 !important;
 }
-.btn_up:after {
+.btn-up:after {
   content: "";
-  width: 10px;
-  height: 10px;
-  border-top: 2px solid #ccc;
-  border-right: 2px solid #ccc;
+  width: 15px;
+  height: 15px;
+  border-top: 4px solid #ffc80a;
+  border-right: 4px solid #ffc80a;
   transform: rotate(-45deg);
   position: absolute;
-  top: 4px;
+  top: 6px;
   bottom: 0;
   left: 0;
   right: 0;
   margin: auto;
 }
-.btn_up.active {
+.btn-up.active {
   bottom: 20px;
 }
 @media (min-width: 992px) {
-  .btn_up.active {
+  .btn-up.active {
     right: 50px;
     bottom: 50px;
   }
 }
 @media (min-width: 1200px) {
-  .btn_up.active {
+  .btn-up.active {
     right: 100px;
     bottom: 100px;
   }
 }
 @media (min-width: 1440px) {
-  .btn_up.active {
+  .btn-up.active {
     right: 200px;
     bottom: 200px;
   }
@@ -649,6 +649,7 @@ h3,
   padding-top: 21px;
   padding-bottom: 21px;
   padding-left: 15px;
+  padding-right: 15px;
 }
 .navigation__toggle-button:before {
   content: "";
@@ -826,7 +827,6 @@ h3,
   color: #fff;
   font-family: "Noto Sans";
   font-weight: 700;
-  letter-spacing: -0.5px;
   margin-bottom: 15px;
 }
 @media (min-width: 768px) {
