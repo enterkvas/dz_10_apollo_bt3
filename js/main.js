@@ -1,25 +1,25 @@
 $(document).ready(function () {
-  // Скрипт для показа и скрытия выпадающего меню на смартфонах
-  // Создаем переменые для кнопки, меню и ссылки:
+  // Script for showing and hiding the drop-down menu on smartphones
+  // Create a change for the button, menu and links:
   var pull = $('#navigation-toggle'),
-    menu = $('.navigation ul'),
+    menu = $('.menu__list'),
     anchor = $('.menu__link');
-  // Описываем событие при нажатии на кнопку меню (вся панель
-  // навигации, а не только кнопка бургера):
+  // We describe the event when pressing the menu button (the entire panel
+  // navigation, not just the Burger button):
   $(pull).on("click", function (e) {
-    // Отменяем стандартное поведение ссылки в браузере
+    // We cancel the standard behavior in the browser
     e.preventDefault();
-    // Открываем/Скрываем меню
+    // Open/hide the menu
     menu.slideToggle();
-    // Добавляем модификатор --active (добавляет/
-    // удаляет темно-синий цветв кнопки меню)
+    // Add the modifier --active (Adds/
+    // Removes a dark blue menu button color)
     $(this).toggleClass('navigation__toggle-button--active');
-    // Возвращает на начало стр при нажатии на бургер
-    // если не находились в начале стр:	
+    // Returns to the beginning of the page when pressed on a burger
+    // if you were not at the beginning of the page:	
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
-  // При изменении размера окна в большую сторону, если меню было скрыто, показываем его
-  // И у кнопки убираем модификатор --active
+  // When the window size changes in the larger direction, if the menu was hidden, show it
+  // And from the button we remove the modifier --active
   $(window).resize(function () {
     var w = $(window).width();
     if (w > 991) {
@@ -27,23 +27,23 @@ $(document).ready(function () {
       pull.removeClass('navigation__toggle-button--active');
     };
   });
-  //Скрываем меню при клике на пункт списка меню
-  // на смартфоне и планцете.
-  //По клику на ссылку в меню запускаем ф-ю fnstart();
+  //We hide the menu when clicking on the menu list item
+  // on a smartphone and tablet
+  //By clicking on the link in the menu, start the function fnstart();
   anchor.on("click", function () {
     fnstart();
   });
-  // В ф-ии fnstart(); проверяем - если меню открыто (проверяем 
-  // по наличию класса --active у кнопки pull) тогда убираем
-  // класс модификатор --active у кнопки pull(который задает
-  // темно-синий фон кнопке) и сворачиваем/скрываем меню 
+  // In function fnstart(); Check - if the menu is open (check
+  // by class --active at the button pull) then we remove
+  // class modifier --active at the button pull(which sets
+  // dark blue background button) and turn/hide the menu 
   function fnstart() {
     if (pull.hasClass("navigation__toggle-button--active")) {
       pull.toggleClass('navigation__toggle-button--active');
       menu.slideToggle();      
     }
-  };
-  // Плавная прокрутка при нажатии на пункты меню
+  };  
+  // Smooth scrolling when pressing on menu items
   $("a.menu__link").click(function () {
     $("html, body").animate({
       scrollTop: $($(this).attr("href")).offset().top - 68
@@ -53,8 +53,7 @@ $(document).ready(function () {
     });    
     return false;
   });
-
-  // Вызов слайдера owl-carousel
+  // Calling the slider owl-carousel
   $("#top-slider").owlCarousel({
     singleItem: true,
     navigation: true,
@@ -62,16 +61,13 @@ $(document).ready(function () {
     navigationText: ["", ""],
     slideSpeed: 600
   });
-
 });
-// Кнопка вверх (.btn-up)
+// Button up (.btn-up)
 $('body').append('<button class="btn-up" />');
-
 $('.btn-up').click(function () {
   $('body').animate({ scrollTop: 0 }, 1000);
   $('html').animate({ scrollTop: 0 }, 1000);
 });
-
 $(window).scroll(function () {
   if ($(window).scrollTop() > 200) {
     $('.btn-up').addClass('active');

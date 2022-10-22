@@ -1,11 +1,10 @@
 .slider {
+  position: relative;
   height: 320px;
   background-color: #00306e;
-  background-image: url("../img/bg/slider-bg.jpg");
+  background-image: url("../img/bg/slider-bg_767.jpg");
   background-position: center;
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  -o-background-size: cover;
+  background-repeat: no-repeat;  
   background-size: cover;  
   padding-top: 60px;
   padding-bottom: 100px;
@@ -59,5 +58,5 @@
       font-size: 22px;
       line-height: 32px;
     }
-  }  
+  }   
 }

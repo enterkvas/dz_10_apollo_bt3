@@ -144,7 +144,6 @@ h3,
   height: 26px;
   width: 26px;
   display: block;
-  -webkit-border-radius: 13px;
   border-radius: 13px;
   background-color: #ffc80a;
   color: #fff;
@@ -190,7 +189,6 @@ h3,
 .top-slider-theme .owl-controls .owl-page {
   display: inline-block;
   zoom: 1;
-  *display: inline; /*IE7 life-saver */
 }
 
 .top-slider-theme .owl-controls .owl-page span {
@@ -227,8 +225,6 @@ h3,
 /* Styling Next and Prev buttons */
 .top-slider-theme .owl-controls .owl-buttons div {
   display: none;
-  /* Clickable class fix problem with hover on touch devices */
-  /* Use it for non-touch hover action */
 }
 @media (min-width: 768px) {
   .top-slider-theme .owl-controls .owl-buttons div {
@@ -240,7 +236,7 @@ h3,
     background-position: left top; /*this holy could not be indicated */
     /*font-size: 0;  It was possible to reset the text inside the buttons (1st option).2nd dump version: In the Main.js file, install St.: navigationText: ['', ''] */
     top: 50%;
-    margin-top: -25px;
+    margin-top: -11px;
   }
 }
 @media (min-width: 1200px) {
@@ -248,6 +244,7 @@ h3,
     margin-top: -47px;
   }
 }
+
 .owl-prev {
   left: 0;
   background-image: url("../img/icons/arrow-left.png");
@@ -259,9 +256,10 @@ h3,
 }
 
 .owl-pagination {
-  position: absolute;
+  position: fixed;
   width: 100%;
-  bottom: -62px;
+  bottom: 42px;
+  left: 0;
 }
 @media (min-width: 768px) {
   .owl-pagination {
@@ -451,11 +449,12 @@ h3,
 }
 .benefit-block__text {
   max-width: 90%;
-  font-size: 14px;
-  line-height: 24px;
-  color: #777;
   margin-left: auto;
   margin-right: auto;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: -0.018em;
+  color: #777;
 }
 @media (min-width: 768px) {
   .benefit-block__text {
@@ -649,7 +648,9 @@ h3,
   padding-top: 21px;
   padding-bottom: 21px;
   padding-left: 15px;
-  padding-right: 15px;
+}
+.navigation__toggle-button--active {
+  background-color: #16385f;
 }
 .navigation__toggle-button:before {
   content: "";
@@ -671,9 +672,6 @@ h3,
   .navigation__toggle-button {
     display: none;
   }
-}
-.navigation__toggle-button--active {
-  background-color: #16385f;
 }
 .navigation .navigation__body {
   position: fixed;
@@ -793,13 +791,12 @@ h3,
 }
 
 .slider {
+  position: relative;
   height: 320px;
   background-color: #00306e;
-  background-image: url("../img/bg/slider-bg.jpg");
+  background-image: url("../img/bg/slider-bg_767.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
   padding-top: 60px;
   padding-bottom: 100px;

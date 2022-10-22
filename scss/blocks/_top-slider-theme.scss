@@ -12,8 +12,7 @@
 
 .top-slider-theme .owl-controls .owl-page {
   display: inline-block;
-  zoom: 1;
-  *display: inline; /*IE7 life-saver */
+  zoom: 1;  
 }
 .top-slider-theme .owl-controls .owl-page span {
   display: block;
@@ -61,17 +60,12 @@
     background-position: left top; /*this holy could not be indicated */
     /*font-size: 0;  It was possible to reset the text inside the buttons (1st option).2nd dump version: In the Main.js file, install St.: navigationText: ['', ''] */
     top: 50%;
-    margin-top: -25px;
+    margin-top: -11px;
   }
 
   @media (min-width: 1200px) {
     margin-top: -47px;
-  }
-
-  /* Clickable class fix problem with hover on touch devices */
-  /* Use it for non-touch hover action */
-  .top-slider-theme .owl-controls.clickable .owl-buttons div:hover {
-  }
+  }    
 }
 
 .owl-prev {
@@ -85,9 +79,10 @@
 }
 
 .owl-pagination {
-  position: absolute; 
+  position: fixed; 
   width: 100%;
-  bottom: -62px;
+  bottom: 42px;
+  left: 0;
 
   @media (min-width: 768px) {
     bottom: -72px;
