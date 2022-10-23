@@ -18,5 +18,15 @@
   }
 }
 
-.mt-10 {margin-top: -10px;}
-.mt25 {margin-top: 25px;}
+.mt-10 {
+  margin-top: -10px;
+
+  @media (min-width: 768px) {
+    margin-top: 0;
+  }
+}
+.mt25 {
+  margin-top: 25px;   
+}
+
+.pt10 {padding-top: 10px;}

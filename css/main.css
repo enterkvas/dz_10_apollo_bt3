@@ -86,9 +86,18 @@ textarea {
 .mt-10 {
   margin-top: -10px;
 }
+@media (min-width: 768px) {
+  .mt-10 {
+    margin-top: 0;
+  }
+}
 
 .mt25 {
   margin-top: 25px;
+}
+
+.pt10 {
+  padding-top: 10px;
 }
 
 html,
@@ -431,7 +440,6 @@ h3,
   align-items: flex-start;
 }
 .benefit-block__header {
-  width: 70%;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
@@ -866,8 +874,20 @@ h3,
 .benefits__row {
   margin-top: 40px;
 }
+@media (min-width: 768px) {
+  .benefits__row {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 50px;
+  }
+}
 .benefits__col {
   margin-bottom: 40px;
+}
+@media (min-width: 768px) {
+  .benefits__col {
+    margin-bottom: 0;
+  }
 }
 .benefits__col:last-child {
   margin-bottom: 0px;
