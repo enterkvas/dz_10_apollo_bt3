@@ -86,14 +86,13 @@ textarea {
 .mt-10 {
   margin-top: -10px;
 }
-@media (min-width: 768px) {
-  .mt-10 {
-    margin-top: 0;
-  }
-}
 
 .mt25 {
   margin-top: 25px;
+}
+
+.mb25 {
+  margin-bottom: 25px;
 }
 
 .pt10 {
@@ -456,12 +455,10 @@ h3,
   }
 }
 .benefit-block__text {
-  max-width: 90%;
   margin-left: auto;
   margin-right: auto;
   font-size: 14px;
   line-height: 24px;
-  letter-spacing: -0.018em;
   color: #777;
 }
 @media (min-width: 768px) {
@@ -480,57 +477,37 @@ h3,
   }
 }
 
-.service-description__img {
-  position: relative;
-}
-.service-description__img--tablet {
-  margin-top: 40px;
-}
-@media (min-width: 768px) {
-  .service-description__img--tablet {
-    margin-top: 0px;
-    margin-bottom: 0px;
-  }
-}
-@media (min-width: 1200px) {
-  .service-description__img--tablet {
-    position: absolute;
-    right: 80px;
-  }
-}
 .service-description__img--rocket {
-  margin-top: 50px;
   margin-bottom: 30px;
 }
 @media (min-width: 768px) {
   .service-description__img--rocket {
-    margin-top: 0px;
+    margin-top: -20px;
     margin-bottom: 0px;
   }
 }
-@media (min-width: 1200px) {
-  .service-description__img--rocket {
-    position: absolute;
-    left: 37px;
-  }
-}
-.service-description__content {
+.service-description__text {
+  max-width: 95%;
   font-size: 14px;
   line-height: 24px;
   color: #777;
-  width: 98%;
   margin-top: 15px;
 }
-.service-description__content p {
+@media (min-width: 768px) {
+  .service-description__text {
+    max-width: 100%;
+  }
+}
+.service-description__text p {
   margin-top: 0px;
   margin-bottom: 22px;
 }
 @media (min-width: 1200px) {
-  .service-description__content {
+  .service-description__text {
     padding-left: 0;
     padding-right: 0;
   }
-  .service-description__content p {
+  .service-description__text p {
     padding-left: 0;
     padding-right: 0;
   }
@@ -543,7 +520,6 @@ h3,
   background-repeat: no-repeat;
   background-position: left top;
   margin-top: -7px;
-  margin-bottom: 50px;
 }
 @media (min-width: 768px) {
   .service-description__button-arrow {
@@ -971,9 +947,21 @@ h3,
 }
 
 .freelance {
+  padding: 40px 0 50px;
   border-bottom: 1px solid #eaeff5;
+}
+@media (min-width: 768px) {
+  .freelance {
+    padding-top: 80px;
+  }
 }
 
 .startup {
+  padding: 50px 0;
   border-bottom: 1px solid #eaeff5;
+}
+@media (min-width: 768px) {
+  .startup {
+    padding: 70px 0 50px;
+  }
 }/*# sourceMappingURL=main.css.map */

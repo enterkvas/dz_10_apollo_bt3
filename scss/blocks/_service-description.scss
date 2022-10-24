@@ -1,43 +1,29 @@
 .service-description {  
   &__img {
-    position: relative;
-
-    &--tablet {
-      margin-top: 40px;
-
-      @media (min-width: 768px) {
-        margin-top: 0px;
-        margin-bottom: 0px;
-      }
-
-      @media (min-width: 1200px) {
-        position: absolute;
-        right: 80px;
-      }
-    }
-
-    &--rocket {
-      margin-top: 50px;
+    &--rocket {    
       margin-bottom: 30px;
 
       @media (min-width: 768px) {
-        margin-top: 0px;
+        margin-top: -20px;
         margin-bottom: 0px;
       }
-
-      @media (min-width: 1200px) {
-        position: absolute;
-        left: 37px;
-      }
+    //   @media (min-width: 1200px) {
+    //     position: absolute;
+    //     left: 37px;
+    //   }
     }
   }
 
-  &__content {
+  &__text {
+    max-width: 95%;
     font-size: 14px;
     line-height: 24px;
     color: #777;
-    width: 98%;
     margin-top: 15px;
+
+    @media (min-width: 768px) {
+      max-width: 100%;
+    }
 
     p {
       margin-top: 0px;
@@ -62,8 +48,7 @@
     background-image: url("../img/icons/arrow-orange.png");
     background-repeat: no-repeat;
     background-position: left top;
-    margin-top: -7px;
-    margin-bottom: 50px;
+    margin-top: -7px;   
 
     @media (min-width: 768px) {
       margin-top: 0px;
