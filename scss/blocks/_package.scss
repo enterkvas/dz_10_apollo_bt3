@@ -32,9 +32,8 @@
     margin-bottom: 13px;
 
     &:after {
-      content: "c";
-      font-family: "als_rublregular";
-      font-weight: 400;
+      content: "$";
+      padding-left: 5px;      
     }
   }
   &__period {
