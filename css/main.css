@@ -269,11 +269,6 @@ h3,
   bottom: 42px;
   left: 0;
 }
-@media (min-width: 768px) {
-  .owl-pagination {
-    bottom: -72px;
-  }
-}
 @media (min-width: 992px) {
   .owl-pagination {
     display: none;
@@ -313,7 +308,6 @@ h3,
 
 .btn-up {
   position: fixed;
-  bottom: -50px;
   right: 15px;
   width: 50px;
   height: 50px;
@@ -339,6 +333,11 @@ h3,
 }
 .btn-up.active {
   bottom: 20px;
+}
+@media (min-width: 768px) {
+  .btn-up.active {
+    bottom: 40px;
+  }
 }
 @media (min-width: 992px) {
   .btn-up.active {
