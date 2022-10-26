@@ -184,6 +184,63 @@ h3,
   padding-left: 9px;
 }
 
+.menu__list {
+  display: none;
+  background-color: #35577d;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  line-height: 20px;
+}
+@media (min-width: 992px) {
+  .menu__list {
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+  }
+}
+.menu__list.hide {
+  transform: translateY(-1000px);
+}
+.menu__list li {
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid #466a92;
+}
+.menu__list li:last-child {
+  border-bottom: none;
+}
+@media (min-width: 992px) {
+  .menu__list li {
+    border-bottom: none;
+  }
+}
+.menu__list li a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 19px 15px;
+}
+@media (min-width: 992px) {
+  .menu__list li a {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 0;
+    padding-right: 0;
+    display: inline;
+    text-decoration: none;
+    border-bottom: none;
+  }
+  .menu__list li a:hover, .menu__list li a.active {
+    color: #ffcc00;
+  }
+}
+@media (min-width: 992px) {
+  .menu__list li a.selected {
+    color: #ffcc00;
+  }
+}
+
 /*
 * 	Owl Carousel Owl Demo Theme 
 *	v1.3.3
@@ -247,7 +304,7 @@ h3,
     margin-top: -11px;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .top-slider-theme .owl-controls .owl-buttons div {
     margin-top: -47px;
   }
@@ -264,10 +321,15 @@ h3,
 }
 
 .owl-pagination {
-  position: fixed;
+  position: absolute;
   width: 100%;
-  bottom: 42px;
+  bottom: -60px;
   left: 0;
+}
+@media (min-width: 768px) {
+  .owl-pagination {
+    bottom: -80px;
+  }
 }
 @media (min-width: 992px) {
   .owl-pagination {
@@ -496,6 +558,11 @@ h3,
     max-width: 100%;
   }
 }
+@media (min-width: 992px) {
+  .service-description__text {
+    max-width: 90%;
+  }
+}
 .service-description__text p {
   margin-top: 0px;
   margin-bottom: 22px;
@@ -534,7 +601,7 @@ h3,
 }
 
 .logo {
-  padding-top: 74px;
+  padding-top: 96px;
   padding-bottom: 38px;
   text-align: center;
   text-transform: uppercase;
@@ -547,28 +614,29 @@ h3,
 }
 @media (min-width: 992px) {
   .logo {
-    padding-top: 40px;
-    padding-bottom: 48px;
+    padding-top: 30px;
+    padding-bottom: 35px;
   }
 }
 @media (min-width: 1200px) {
   .logo {
-    padding-top: 17px;
-    padding-bottom: 48px;
+    padding-top: 57px;
+    padding-bottom: 50px;
   }
 }
 .logo__name {
-  margin-top: 25px;
   padding-left: 0.1em;
+  margin-bottom: 6px;
   color: #000;
   font-size: 33px;
-  line-height: 1.38;
   letter-spacing: 0.21em;
+  line-height: 1;
   font-weight: 700;
 }
 @media (min-width: 768px) {
   .logo__name {
     margin-top: 0;
+    letter-spacing: 0.25em;
   }
 }
 @media (min-width: 992px) {
@@ -580,9 +648,8 @@ h3,
 @media (min-width: 1200px) {
   .logo__name {
     font-size: 38px;
-    letter-spacing: 9.5px;
-    line-height: 1.5;
-    margin-top: 27px;
+    line-height: 1;
+    margin-bottom: 10px;
   }
 }
 .logo__slogan {
@@ -592,16 +659,19 @@ h3,
   letter-spacing: 0.7em;
   font-weight: 700;
 }
+@media (min-width: 768px) {
+  .logo__slogan {
+    letter-spacing: 0.75em;
+  }
+}
 @media (min-width: 992px) {
   .logo__slogan {
     font-size: 16px;
-    letter-spacing: 0.65em;
   }
 }
 @media (min-width: 1200px) {
   .logo__slogan {
     font-size: 16px;
-    letter-spacing: 10.3px;
   }
 }
 
@@ -621,9 +691,9 @@ h3,
 }
 @media (min-width: 992px) {
   .navigation {
-    padding-top: 20px;
-    padding-bottom: 20px;
     position: relative;
+    padding-top: 23px;
+    padding-bottom: 23px;
   }
 }
 .navigation__toggle-button {
@@ -655,70 +725,13 @@ h3,
     display: none;
   }
 }
-.navigation .navigation__body {
+.navigation__body {
   position: fixed;
   width: 100%;
 }
 @media (min-width: 992px) {
-  .navigation .navigation__body {
+  .navigation__body {
     position: static;
-  }
-}
-.navigation .menu__list {
-  display: none;
-  background-color: #35577d;
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  line-height: 20px;
-}
-.navigation .menu__list.hide {
-  transform: translateY(-1000px);
-}
-@media (min-width: 992px) {
-  .navigation .menu__list {
-    display: flex;
-    justify-content: space-between;
-    background-color: transparent;
-    line-height: 26px;
-  }
-}
-.navigation .menu__list li {
-  margin: 0;
-  padding: 0;
-  border-bottom: 1px solid #466a92;
-}
-.navigation .menu__list li:last-child {
-  border-bottom: none;
-}
-@media (min-width: 992px) {
-  .navigation .menu__list li {
-    border-bottom: none;
-  }
-}
-.navigation .menu__list li a {
-  display: block;
-  color: #fff;
-  text-decoration: none;
-  padding: 19px 15px;
-}
-@media (min-width: 992px) {
-  .navigation .menu__list li a {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 0;
-    padding-right: 0;
-    display: inline;
-    text-decoration: none;
-    border-bottom: none;
-  }
-  .navigation .menu__list li a:hover, .navigation .menu__list li a.active {
-    color: #ffcc00;
-  }
-}
-@media (min-width: 992px) {
-  .navigation .menu__list li a.selected {
-    color: #ffcc00;
   }
 }
 
@@ -734,7 +747,8 @@ h3,
 }
 @media (min-width: 992px) {
   .prices {
-    padding-bottom: 0;
+    padding-top: 40px;
+    padding-bottom: 60px;
   }
 }
 @media (min-width: 1200px) {
@@ -756,11 +770,6 @@ h3,
     margin-right: auto;
   }
 }
-@media (min-width: 992px) {
-  .prices__subtitle {
-    margin-top: -10px;
-  }
-}
 @media (min-width: 1200px) {
   .prices__subtitle {
     width: 80%;
@@ -774,27 +783,26 @@ h3,
 
 .slider {
   position: relative;
-  height: 320px;
   background-color: #00306e;
   background-image: url("../img/bg/slider-bg_767.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 60px;
-  padding-bottom: 100px;
+  padding-bottom: 70px;
   box-shadow: 0px 3px 25px 0px #688ab3;
 }
-@media (min-width: 992px) {
+@media (min-width: 390px) {
   .slider {
-    height: 400px;
+    padding-top: 80px;
   }
 }
 @media (min-width: 768px) {
   .slider {
-    padding-bottom: 83px;
+    padding-bottom: 90px;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .slider {
     padding-top: 100px;
     padding-bottom: 92px;
@@ -817,6 +825,7 @@ h3,
   .slider__title {
     font-size: 32px;
     line-height: 42px;
+    margin-bottom: 17px;
   }
 }
 @media (min-width: 1200px) {
@@ -953,6 +962,11 @@ h3,
     padding-top: 80px;
   }
 }
+@media (min-width: 992px) {
+  .freelance {
+    padding-bottom: 10px;
+  }
+}
 
 .startup {
   padding: 50px 0;
@@ -961,5 +975,10 @@ h3,
 @media (min-width: 768px) {
   .startup {
     padding: 70px 0 50px;
+  }
+}
+@media (min-width: 992px) {
+  .startup {
+    padding-bottom: 30px;
   }
 }/*# sourceMappingURL=main.css.map */

@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(function () {  
   // Script for showing and hiding the drop-down menu on smartphones
   // Create a change for the button, menu and links:
   var pull = $('#navigation-toggle'),
@@ -45,15 +45,26 @@ $(document).ready(function () {
   };  
   // Smooth scrolling when pressing on menu items
   $("a.menu__link").click(function () {
-    $("html, body").animate({
-      scrollTop: $($(this).attr("href")).offset().top - 68
-    }, {
-      duration: 1000,
-      easing: "swing"
-    });    
-    return false;
-  });
-  // Calling the slider owl-carousel
+    var w = $(window).width();
+    if (w < 992) {
+      $("html, body").animate({      
+        scrollTop: $($(this).attr("href")).offset().top - 68      
+      }, {
+        duration: 1000,
+        easing: "swing"
+      });       
+      // return false;
+    } else {
+      $("html, body").animate({      
+        scrollTop: $($(this).attr("href")).offset().top      
+      }, {
+        duration: 1000,
+        easing: "swing"
+      });       
+      // return false;
+    };
+    return false;     
+  });  
   $("#top-slider").owlCarousel({
     singleItem: true,
     navigation: true,

@@ -63,9 +63,9 @@
     margin-top: -11px;
   }
 
-  @media (min-width: 1200px) {
+  @media (min-width: 992px) {
     margin-top: -47px;
-  }    
+  }     
 }
 
 .owl-prev {
@@ -79,10 +79,15 @@
 }
 
 .owl-pagination {
-  position: fixed; 
+  // position: fixed;
+  position: absolute; 
   width: 100%;
-  bottom: 42px;
-  left: 0;  
+  bottom: -60px;
+  left: 0;
+  
+  @media (min-width: 768px) {
+    bottom: -80px;
+  }
 
   @media (min-width: 992px) {
     display: none;
