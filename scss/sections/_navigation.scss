@@ -25,6 +25,10 @@
     padding-bottom: 21px;
     padding-left: 15px;
 
+    @media (min-width: 768px) {
+      padding-left: 20px;
+    }
+
     &--active {
       background-color: #16385f;
     }

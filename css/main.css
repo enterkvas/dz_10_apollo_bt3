@@ -83,6 +83,13 @@ textarea {
   }
 }
 
+@media (min-width: 768px) {
+  .container--smaller {
+    padding-left: 11px;
+    padding-right: 11px;
+  }
+}
+
 @media (max-width: 991px) {
   .mt-10 {
     margin-top: -10px;
@@ -651,7 +658,7 @@ h1, h2, h3, .h1,
 }
 .logo__name {
   padding-left: 0.1em;
-  margin-bottom: 6px;
+  margin-bottom: 0.19em;
   color: #000;
   font-size: 33px;
   letter-spacing: 0.21em;
@@ -662,6 +669,7 @@ h1, h2, h3, .h1,
   .logo__name {
     padding-left: 0;
     margin-top: 0;
+    margin-bottom: 0.25em;
     letter-spacing: 0.25em;
   }
 }
@@ -729,6 +737,11 @@ h1, h2, h3, .h1,
   padding-top: 21px;
   padding-bottom: 21px;
   padding-left: 15px;
+}
+@media (min-width: 768px) {
+  .navigation__toggle-button {
+    padding-left: 20px;
+  }
 }
 .navigation__toggle-button--active {
   background-color: #16385f;
