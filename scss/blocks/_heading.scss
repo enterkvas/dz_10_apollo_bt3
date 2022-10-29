@@ -3,11 +3,20 @@
   line-height: calc(38 / 28);
   font-weight: 700;
   letter-spacing: -0.5px;
-  position: relative;  
+  color: $default-heading;
+  position: relative;
+  
+  @media (min-width: 992px) {
+    font-size: 38px;
+    line-height: calc(48 / 38);
+  }
 
   &--number:before {   
     height: 26px;
     width: 26px;
+    padding-top: 5px;
+    padding-left: 9px;
+
     display: block;    
     border-radius: 13px;
     background-color: $default-orange;
@@ -17,28 +26,20 @@
     line-height: 1;
 
     position: absolute;
-    left: -11px;
-    top: -39px;
-
-    @media (min-width: 992px) {
-      top: -55px;
-    }
+    left: -13px;
+    top: -40px;    
 
     @media (min-width: 1200px) {
-      left: -32px;
-      top: -42px;
+      left: -27px;
+      top: -20px;
     }
   }
 
   &--number-1:before {
-    content: "1";
-    padding-top: 5px;
-    padding-left: 9px;
+    content: "1";    
   }
 
   &--number-2:before {
-    content: "2";
-    padding-top: 5px;
-    padding-left: 9px;
+    content: "2";    
   }
 }

@@ -15,12 +15,11 @@
   }
 
   @media (min-width: 1200px) {
-    padding-top: 57px;
+    padding-top: 60px;
     padding-bottom: 50px;
   }
 
   &__name {
-    // margin-top: 25px;
     padding-left: 0.1em;
     margin-bottom: 6px;
     color: #000;
@@ -30,6 +29,7 @@
     font-weight: 700;    
 
     @media (min-width: 768px) {
+      padding-left: 0;
       margin-top: 0;
       letter-spacing: 0.25em;
     }
@@ -39,26 +39,27 @@
       letter-spacing: 0.25em;
     }
     @media (min-width: 1200px) {
-      font-size: 38px;
-      // letter-spacing: 9.5px;
+      font-size: 38px;      
       line-height: 1;
-      margin-bottom: 10px;
-      // margin-top: 27px;
+      margin-bottom: 10px;      
     }
   }
 
   &__slogan {
+    padding-left: 0.25em;
     color: #a1bbd9;
     font-size: 14px;
     line-height: 1;
-    letter-spacing: 0.7em;
+    letter-spacing: 0.69em;
     font-weight: 700;
 
     @media (min-width: 768px) {
-      letter-spacing: 0.75em;      
+      padding-left: 0.1em;
+      letter-spacing: 0.77em;      
     }
 
     @media (min-width: 992px) {
+      padding-left: 0;
       font-size: 16px;      
     }
     @media (min-width: 1200px) {
@@ -66,11 +67,3 @@
     }     
   }
 }
-// .logo {
-
-//   @media (min-width: 992px) {
-//     padding-top: 30px;
-//     padding-bottom: 35px;
-//   }
-  
-// }

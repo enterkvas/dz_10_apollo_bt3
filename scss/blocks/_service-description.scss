@@ -1,16 +1,31 @@
 .service-description {  
   &__img {
+    
     &--rocket {    
-      margin-bottom: 30px;
+      margin-bottom: 32px;
 
       @media (min-width: 768px) {
         margin-top: -20px;
         margin-bottom: 0px;
       }
-    //   @media (min-width: 1200px) {
-    //     position: absolute;
-    //     left: 37px;
-    //   }
+
+      @media (min-width: 1200px) {
+        position: absolute;
+        left: 37px;
+      }
+    }
+
+    &--tablet {
+      margin-bottom: 12px; 
+      
+      @media (min-width: 768px) {
+        margin-bottom: 0;
+      }
+
+      @media (min-width: 1200px) {      
+        position: absolute;
+        left: -32px;
+      }      
     }
   }
 
@@ -24,25 +39,11 @@
     @media (min-width: 768px) {
       max-width: 100%;
     }
-
-    @media (min-width: 992px) {
-      max-width: 90%;
-    }
-
+    
     p {
       margin-top: 0px;
-      margin-bottom: 22px;
-    }
-
-    @media (min-width: 1200px) {
-      padding-left: 0;
-      padding-right: 0;
-
-      p {
-        padding-left: 0;
-        padding-right: 0;
-      }
-    }
+      margin-bottom: 23px;
+    }   
   }
 
   &__button-arrow {

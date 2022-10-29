@@ -24,10 +24,7 @@ p {
   color: #777;
 }
 
-h1,
-h2,
-h3,
-.h1,
+h1,h2,h3,.h1,
 .h2,
 .h3 {
   margin: 0;
@@ -38,18 +35,3 @@ h3,
   width: 100%;
   height: 80px;
 }
-
-/* Pseudo-elements, an allocation from above for links-yakores of the navigation unit.This code does not work, apparently.Just in case, he left him.But he solved the problems with retreats after scrolling in the Main.js file (below) with the right js */
-// #freelance:before, #startup:before, #price:before, #footer:before {
-// 	display: block;
-// 	content: "";
-// 	height: 55px;
-// 	margin: -55px 0 0;
-
-// 	@media (min-width: 992px) {
-// 		display: block;
-// 		content: "";
-// 		height: 0px;
-// 		margin: 0px;
-// 	}
-// }

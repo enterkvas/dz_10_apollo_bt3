@@ -20,7 +20,12 @@
   @media (min-width: 992px) {
     padding-top: 100px;
     padding-bottom: 92px;
-  }  
+  }
+  
+  @media (min-width: 1200px) {
+    padding-top: 100px;
+    padding-bottom: 127px;
+  }
 
   &__title {    
     font-size: 28px;

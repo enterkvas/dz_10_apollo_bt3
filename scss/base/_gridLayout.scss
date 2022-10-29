@@ -14,7 +14,29 @@
   }
 }
 
-.mt-10 {margin-top: -10px;}
-.mt25 {margin-top: 25px;}
+.mt-10 {
+  @media (max-width: 991px) {
+    margin-top: -10px;
+  }  
+}
+
+.mt-13 {
+  @media (min-width: 992px) and (max-width: 1199px) {
+    margin-top: -13px;
+  }   
+}
+
+.mt20 {
+  @media (min-width: 1200px) {
+    margin-top: 20px;
+  }  
+}
+.mt25 {
+  margin-top: 25px;
+
+  @media (min-width: 1200px) {
+    margin-top: 0;
+  }
+}
 .mb25 {margin-bottom: 25px;}
 .pt10 {padding-top: 10px;}

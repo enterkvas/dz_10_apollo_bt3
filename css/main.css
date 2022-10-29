@@ -83,12 +83,31 @@ textarea {
   }
 }
 
-.mt-10 {
-  margin-top: -10px;
+@media (max-width: 991px) {
+  .mt-10 {
+    margin-top: -10px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .mt-13 {
+    margin-top: -13px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .mt20 {
+    margin-top: 20px;
+  }
 }
 
 .mt25 {
   margin-top: 25px;
+}
+@media (min-width: 1200px) {
+  .mt25 {
+    margin-top: 0;
+  }
 }
 
 .mb25 {
@@ -125,10 +144,7 @@ p {
   color: #777;
 }
 
-h1,
-h2,
-h3,
-.h1,
+h1, h2, h3, .h1,
 .h2,
 .h3 {
   margin: 0;
@@ -140,17 +156,25 @@ h3,
   height: 80px;
 }
 
-/* Pseudo-elements, an allocation from above for links-yakores of the navigation unit.This code does not work, apparently.Just in case, he left him.But he solved the problems with retreats after scrolling in the Main.js file (below) with the right js */
 .heading {
   font-size: 28px;
   line-height: 1.3571428571;
   font-weight: 700;
   letter-spacing: -0.5px;
+  color: #333;
   position: relative;
+}
+@media (min-width: 992px) {
+  .heading {
+    font-size: 38px;
+    line-height: 1.2631578947;
+  }
 }
 .heading--number:before {
   height: 26px;
   width: 26px;
+  padding-top: 5px;
+  padding-left: 9px;
   display: block;
   border-radius: 13px;
   background-color: #ffc80a;
@@ -159,29 +183,20 @@ h3,
   font-weight: 700;
   line-height: 1;
   position: absolute;
-  left: -11px;
-  top: -39px;
-}
-@media (min-width: 992px) {
-  .heading--number:before {
-    top: -55px;
-  }
+  left: -13px;
+  top: -40px;
 }
 @media (min-width: 1200px) {
   .heading--number:before {
-    left: -32px;
-    top: -42px;
+    left: -27px;
+    top: -20px;
   }
 }
 .heading--number-1:before {
   content: "1";
-  padding-top: 5px;
-  padding-left: 9px;
 }
 .heading--number-2:before {
   content: "2";
-  padding-top: 5px;
-  padding-left: 9px;
 }
 
 .menu__list {
@@ -307,6 +322,11 @@ h3,
 @media (min-width: 992px) {
   .top-slider-theme .owl-controls .owl-buttons div {
     margin-top: -47px;
+  }
+}
+@media (min-width: 1200px) {
+  .top-slider-theme .owl-controls .owl-buttons div {
+    margin-top: -35px;
   }
 }
 
@@ -538,12 +558,32 @@ h3,
 }
 
 .service-description__img--rocket {
-  margin-bottom: 30px;
+  margin-bottom: 32px;
 }
 @media (min-width: 768px) {
   .service-description__img--rocket {
     margin-top: -20px;
     margin-bottom: 0px;
+  }
+}
+@media (min-width: 1200px) {
+  .service-description__img--rocket {
+    position: absolute;
+    left: 37px;
+  }
+}
+.service-description__img--tablet {
+  margin-bottom: 12px;
+}
+@media (min-width: 768px) {
+  .service-description__img--tablet {
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .service-description__img--tablet {
+    position: absolute;
+    left: -32px;
   }
 }
 .service-description__text {
@@ -558,24 +598,9 @@ h3,
     max-width: 100%;
   }
 }
-@media (min-width: 992px) {
-  .service-description__text {
-    max-width: 90%;
-  }
-}
 .service-description__text p {
   margin-top: 0px;
-  margin-bottom: 22px;
-}
-@media (min-width: 1200px) {
-  .service-description__text {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .service-description__text p {
-    padding-left: 0;
-    padding-right: 0;
-  }
+  margin-bottom: 23px;
 }
 .service-description__button-arrow {
   display: block;
@@ -620,7 +645,7 @@ h3,
 }
 @media (min-width: 1200px) {
   .logo {
-    padding-top: 57px;
+    padding-top: 60px;
     padding-bottom: 50px;
   }
 }
@@ -635,6 +660,7 @@ h3,
 }
 @media (min-width: 768px) {
   .logo__name {
+    padding-left: 0;
     margin-top: 0;
     letter-spacing: 0.25em;
   }
@@ -653,19 +679,22 @@ h3,
   }
 }
 .logo__slogan {
+  padding-left: 0.25em;
   color: #a1bbd9;
   font-size: 14px;
   line-height: 1;
-  letter-spacing: 0.7em;
+  letter-spacing: 0.69em;
   font-weight: 700;
 }
 @media (min-width: 768px) {
   .logo__slogan {
-    letter-spacing: 0.75em;
+    padding-left: 0.1em;
+    letter-spacing: 0.77em;
   }
 }
 @media (min-width: 992px) {
   .logo__slogan {
+    padding-left: 0;
     font-size: 16px;
   }
 }
@@ -808,6 +837,12 @@ h3,
     padding-bottom: 92px;
   }
 }
+@media (min-width: 1200px) {
+  .slider {
+    padding-top: 100px;
+    padding-bottom: 127px;
+  }
+}
 .slider__title {
   font-size: 28px;
   line-height: 39px;
@@ -854,27 +889,6 @@ h3,
   padding-bottom: 50px;
   border-bottom: 1px solid #eaeff5;
 }
-.benefits__row {
-  margin-top: 40px;
-}
-@media (min-width: 768px) {
-  .benefits__row {
-    display: flex;
-    flex-wrap: wrap;
-    row-gap: 50px;
-  }
-}
-.benefits__col {
-  margin-bottom: 40px;
-}
-@media (min-width: 768px) {
-  .benefits__col {
-    margin-bottom: 0;
-  }
-}
-.benefits__col:last-child {
-  margin-bottom: 0px;
-}
 @media (min-width: 768px) {
   .benefits {
     padding-top: 32px;
@@ -889,7 +903,29 @@ h3,
 @media (min-width: 1200px) {
   .benefits {
     padding-top: 70px;
-    padding-bottom: 52px;
+    padding-bottom: 70px;
+  }
+}
+.benefits__row {
+  margin-top: 40px;
+}
+@media (min-width: 768px) {
+  .benefits__row {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 50px;
+    margin-top: 50px;
+  }
+}
+.benefits__col {
+  margin-bottom: 40px;
+}
+.benefits__col:last-child {
+  margin-bottom: 0px;
+}
+@media (min-width: 768px) {
+  .benefits__col {
+    margin-bottom: 0;
   }
 }
 
@@ -964,7 +1000,12 @@ h3,
 }
 @media (min-width: 992px) {
   .freelance {
-    padding-bottom: 10px;
+    padding-bottom: 30px;
+  }
+}
+@media (min-width: 1200px) {
+  .freelance {
+    padding: 70px 0 80px;
   }
 }
 
@@ -980,5 +1021,10 @@ h3,
 @media (min-width: 992px) {
   .startup {
     padding-bottom: 30px;
+  }
+}
+@media (min-width: 1200px) {
+  .startup {
+    padding: 100px 0;
   }
 }/*# sourceMappingURL=main.css.map */
