@@ -68,6 +68,7 @@ $(document).ready(function () {
   $("#top-slider").owlCarousel({
     singleItem: true,
     navigation: true,
+    baseClass: "top-slider",
     theme: "top-slider-theme",
     navigationText: ["", ""],
     slideSpeed: 600

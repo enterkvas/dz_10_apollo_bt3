@@ -72,21 +72,14 @@ textarea {
 }
 @media (min-width: 992px) {
   .container--mobile--no-padding {
-    padding-left: 15px;
-    padding-right: 15px;
-    width: 970px;
+    padding-left: 25px;
+    padding-right: 25px;
   }
 }
 @media (min-width: 1200px) {
   .container--mobile--no-padding {
-    width: 1170px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container--smaller {
-    padding-left: 11px;
-    padding-right: 11px;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
@@ -245,11 +238,11 @@ h1, h2, h3, .h1,
 }
 @media (min-width: 992px) {
   .menu__list li a {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    display: inline-block;
+    padding-top: 24px;
+    padding-bottom: 24px;
     padding-left: 0;
     padding-right: 0;
-    display: inline;
     text-decoration: none;
     border-bottom: none;
   }
@@ -261,6 +254,85 @@ h1, h2, h3, .h1,
   .menu__list li a.selected {
     color: #ffcc00;
   }
+}
+
+/* 
+ * 	Core Owl Carousel CSS File
+ *	v1.3.3
+ */
+/* clearfix */
+.top-slider .owl-wrapper:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+/* display none until init */
+.top-slider {
+  display: none;
+  width: 100%;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+}
+
+.top-slider .owl-wrapper {
+  display: none;
+  position: relative;
+  -webkit-transform: translate3d(0px, 0px, 0px);
+  transform: translate3d(0px, 0px, 0px);
+}
+
+.top-slider .owl-wrapper-outer {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.top-slider .owl-wrapper-outer.autoHeight {
+  -webkit-transition: height 500ms ease-in-out;
+  -moz-transition: height 500ms ease-in-out;
+  -ms-transition: height 500ms ease-in-out;
+  -o-transition: height 500ms ease-in-out;
+  transition: height 500ms ease-in-out;
+}
+
+.top-slider .owl-item {
+  float: left;
+}
+
+.owl-controls .owl-page,
+.owl-controls .owl-buttons div {
+  cursor: pointer;
+}
+
+.owl-controls {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* mouse grab icon */
+.grabbing {
+  cursor: url(grabbing.png) 8 8, move;
+}
+
+/* fix */
+.top-slider .owl-wrapper,
+.top-slider .owl-item {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
 }
 
 /*
@@ -322,41 +394,35 @@ h1, h2, h3, .h1,
     background-repeat: no-repeat; /*this holy could not be indicated */
     background-position: left top; /*this holy could not be indicated */
     /*font-size: 0;  It was possible to reset the text inside the buttons (1st option).2nd dump version: In the Main.js file, install St.: navigationText: ['', ''] */
-    top: 50%;
-    margin-top: -11px;
-  }
-}
-@media (min-width: 992px) {
-  .top-slider-theme .owl-controls .owl-buttons div {
-    margin-top: -47px;
-  }
-}
-@media (min-width: 1200px) {
-  .top-slider-theme .owl-controls .owl-buttons div {
-    margin-top: -35px;
+    top: 37%;
   }
 }
 
 .owl-prev {
-  left: 0;
+  left: 20px;
   background-image: url("../img/icons/arrow-left.png");
+}
+@media (min-width: 992px) {
+  .owl-prev {
+    left: 25px;
+  }
 }
 
 .owl-next {
-  right: 0;
+  right: 20px;
   background-image: url("../img/icons/arrow-right.png");
+}
+@media (min-width: 992px) {
+  .owl-next {
+    right: 25px;
+  }
 }
 
 .owl-pagination {
   position: absolute;
   width: 100%;
-  bottom: -60px;
+  bottom: 21px;
   left: 0;
-}
-@media (min-width: 768px) {
-  .owl-pagination {
-    bottom: -80px;
-  }
 }
 @media (min-width: 992px) {
   .owl-pagination {
@@ -640,7 +706,7 @@ h1, h2, h3, .h1,
 }
 @media (min-width: 768px) {
   .logo {
-    padding-top: 98px;
+    padding-top: 100px;
     padding-bottom: 38px;
   }
 }
@@ -729,8 +795,6 @@ h1, h2, h3, .h1,
 @media (min-width: 992px) {
   .navigation {
     position: relative;
-    padding-top: 23px;
-    padding-bottom: 23px;
   }
 }
 .navigation__toggle-button {
@@ -831,34 +895,29 @@ h1, h2, h3, .h1,
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 60px;
-  padding-bottom: 70px;
+  padding-bottom: 74px;
   box-shadow: 0px 3px 25px 0px #688ab3;
-}
-@media (min-width: 390px) {
-  .slider {
-    padding-top: 80px;
-  }
 }
 @media (min-width: 768px) {
   .slider {
-    padding-bottom: 90px;
+    padding-bottom: 73px;
   }
 }
 @media (min-width: 992px) {
   .slider {
     padding-top: 100px;
-    padding-bottom: 92px;
+    padding-bottom: 93px;
   }
 }
 @media (min-width: 1200px) {
   .slider {
     padding-top: 100px;
-    padding-bottom: 127px;
+    padding-bottom: 150px;
   }
 }
 .slider__title {
   font-size: 28px;
-  line-height: 39px;
+  line-height: 1.3571428571;
   color: #fff;
   font-family: "Noto Sans";
   font-weight: 700;
@@ -872,7 +931,7 @@ h1, h2, h3, .h1,
 @media (min-width: 992px) {
   .slider__title {
     font-size: 32px;
-    line-height: 42px;
+    line-height: 1.3125;
     margin-bottom: 17px;
   }
 }

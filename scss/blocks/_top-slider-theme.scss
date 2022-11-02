@@ -59,39 +59,33 @@
     background-repeat: no-repeat; /*this holy could not be indicated */
     background-position: left top; /*this holy could not be indicated */
     /*font-size: 0;  It was possible to reset the text inside the buttons (1st option).2nd dump version: In the Main.js file, install St.: navigationText: ['', ''] */
-    top: 50%;
-    margin-top: -11px;
-  }
-
-  @media (min-width: 992px) {
-    margin-top: -47px;
-  }
-  
-  @media (min-width: 1200px) {
-    margin-top: -35px;
-  }
+    top: 37%; 
+  } 
 }
 
 .owl-prev {
-  left: 0;
+  left: 20px;
   background-image: url("../img/icons/arrow-left.png");
+
+  @media (min-width: 992px) {
+    left: 25px;
+  }
 }
 
 .owl-next {
-  right: 0;
+  right: 20px;
   background-image: url("../img/icons/arrow-right.png");
+  
+  @media (min-width: 992px) {
+    right: 25px;
+  }
 }
 
-.owl-pagination {
-  // position: fixed;
+.owl-pagination {  
   position: absolute; 
   width: 100%;
-  bottom: -60px;
-  left: 0;
-  
-  @media (min-width: 768px) {
-    bottom: -80px;
-  }
+  bottom: 21px;
+  left: 0;  
 
   @media (min-width: 992px) {
     display: none;

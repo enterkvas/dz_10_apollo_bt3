@@ -4,21 +4,14 @@
   width: 100%;
 
   @media (min-width: 992px) {
-    padding-left: 15px;
-    padding-right: 15px;
-    width: 970px;
+    padding-left: 25px;
+    padding-right: 25px;    
   }
 
   @media (min-width: 1200px) {
-    width: 1170px;
+    margin-left: 0;
+    margin-right: 0;    
   }
-}
-
-.container--smaller {
-  @media (min-width: 768px) {
-    padding-left: 11px;
-    padding-right: 11px;
-  }  
 }
 
 .mt-10 {
