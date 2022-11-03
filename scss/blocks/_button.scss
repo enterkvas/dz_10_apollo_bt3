@@ -10,7 +10,7 @@
   letter-spacing: 0.8px;
   line-height: 1;
   display: inline-block;
-  padding: 14px 44px;
+  padding: 14px 50px;
 
   &:hover,
   &:active,
@@ -22,9 +22,7 @@
   }
 }
 .button--orange {
-  background-color: $default-orange;
-  // background-color: var(--default-orange);
-  padding: 14px 28px;
+  background-color: $default-orange;  
 }
 // Button "Up":
 .btn-up {

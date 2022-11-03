@@ -448,7 +448,7 @@ h1, h2, h3, .h1,
   letter-spacing: 0.8px;
   line-height: 1;
   display: inline-block;
-  padding: 14px 44px;
+  padding: 14px 50px;
 }
 .button:hover, .button:active, .button:focus {
   background-color: #ffc80a;
@@ -458,7 +458,6 @@ h1, h2, h3, .h1,
 
 .button--orange {
   background-color: #ffc80a;
-  padding: 14px 28px;
 }
 
 .btn-up {
@@ -859,8 +858,8 @@ h1, h2, h3, .h1,
 }
 @media (min-width: 1200px) {
   .prices {
-    padding-top: 73px;
-    padding-bottom: 90px;
+    padding-top: 62px;
+    padding-bottom: 100px;
   }
 }
 .prices__subtitle {
@@ -871,17 +870,15 @@ h1, h2, h3, .h1,
 }
 @media (min-width: 768px) {
   .prices__subtitle {
-    width: 75%;
     margin-left: auto;
     margin-right: auto;
   }
 }
 @media (min-width: 1200px) {
   .prices__subtitle {
-    width: 80%;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 53px;
+    margin-bottom: 60px;
     padding-left: 0px;
     padding-right: 0px;
   }
@@ -964,7 +961,7 @@ h1, h2, h3, .h1,
 @media (min-width: 768px) {
   .benefits {
     padding-top: 32px;
-    padding-bottom: 67px;
+    padding-bottom: 73px;
   }
 }
 @media (min-width: 992px) {
@@ -986,7 +983,11 @@ h1, h2, h3, .h1,
     display: flex;
     flex-wrap: wrap;
     row-gap: 50px;
-    margin-top: 50px;
+  }
+}
+@media (min-width: 768px) and (min-width: 1200px) {
+  .benefits__row {
+    margin-top: 64px;
   }
 }
 .benefits__col {
@@ -1009,8 +1010,8 @@ h1, h2, h3, .h1,
 }
 @media (min-width: 1200px) {
   .footer {
-    padding-top: 75px;
-    padding-bottom: 75px;
+    padding-top: 83px;
+    padding-bottom: 80px;
   }
 }
 @media (min-width: 768px) {
