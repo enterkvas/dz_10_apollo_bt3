@@ -31,39 +31,42 @@
 
   &__text {
     max-width: 95%;
-    font-size: 14px;
-    line-height: 24px;
-    color: #777;
     margin-top: 15px;
+    line-height: 24px;
+    font-size: 14px;
+    color: #777;
 
     @media (min-width: 768px) {
       max-width: 100%;
     }
     
-    p {
+    & p {
       margin-top: 0px;
       margin-bottom: 23px;
-    }   
+    }
+    
+    & p:last-child {      
+      margin-bottom: 0px;
+    }
   }
 
   &__button-arrow {
     display: block;
     width: 40px;
     height: 40px;
+    margin-top: 20px;   
     background-image: url("../img/icons/arrow-orange.png");
     background-repeat: no-repeat;
     background-position: left top;
-    margin-top: -7px;   
 
     @media (min-width: 768px) {
-      margin-top: 0px;
+      margin-top: 23px;
       margin-bottom: 0px;
     }
 
-    @media (min-width: 1200px) {
-      margin-top: 2px;
-      margin-left: 0;
+    @media (min-width: 1200px) {      
       margin-top: 26px;
+      margin-left: 0;
     }
   }
 }

@@ -1,13 +1,15 @@
 .slider {
   position: relative;  
-  background-color: #00306e;
-  background-image: url("../img/bg/slider-bg_767.jpg");
+  padding-top: 60px;
+  padding-bottom: 74px;
+  background-color: #16385f;
+  background-image: url("../img/bg/slider-bg.jpg");
   background-position: center;
   background-repeat: no-repeat;  
   background-size: cover;  
-  padding-top: 60px;
-  padding-bottom: 74px;
-  box-shadow: 0px 3px 25px 0px #688ab3;  
+  box-shadow: 0px 3px 25px 0px #688ab3;
+  
+  // &--without-shadow {box-shadow: none;}
 
   @media (min-width: 768px) {
     padding-bottom: 73px;
@@ -24,21 +26,21 @@
   }
 
   &__title {    
-    font-size: 28px;
+    margin-bottom: 15px;
     line-height: calc(38 / 28);
-    color: #fff;
+    font-size: 28px;
     font-family: "Noto Sans";
     font-weight: 700;    
-    margin-bottom: 15px;
+    color: #fff;
 
     @media (min-width: 768px) {
       margin-bottom: 6px;
     }
 
     @media (min-width: 992px) {
-      font-size: 32px;
       line-height: calc(42 / 32);
       margin-bottom: 17px;
+      font-size: 32px;
     }
 
     @media (min-width: 1200px) {
@@ -49,11 +51,11 @@
   &__slogan {
     margin-left: auto;
     margin-right: auto;
-    color: #cddfe0;
-    font-size: 18px;
     line-height: 28px;
-    letter-spacing: 0.15px;
     font-family: "Noto Serif";
+    font-size: 18px;
+    letter-spacing: 0.15px;
+    color: #cddfe0;
 
     @media (min-width: 992px) {
       font-size: 22px;

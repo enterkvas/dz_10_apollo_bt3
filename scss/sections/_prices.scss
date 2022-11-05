@@ -18,10 +18,10 @@
   }
 
   &__subtitle {
-    font-size: 14px;
-    line-height: 24px;
-    color: #777;
     margin: 10px 10px 37px;
+    line-height: 24px;
+    font-size: 14px;
+    color: #777;
 
     @media (min-width: 768px) {      
       margin-left: auto;
@@ -29,11 +29,11 @@
     }
     
     @media (min-width: 1200px) {      
+      padding-right: 0px;
       margin-left: auto;
       margin-right: auto;
       margin-bottom: 60px;
       padding-left: 0px;
-      padding-right: 0px;
     }    
   }
 }

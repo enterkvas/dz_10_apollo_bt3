@@ -1,7 +1,7 @@
 .container--mobile--no-padding {
+  width: 100%;
   padding-left: 0;
   padding-right: 0;
-  width: 100%;
 
   @media (min-width: 992px) {
     padding-left: 25px;

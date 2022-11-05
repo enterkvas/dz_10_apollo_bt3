@@ -8,31 +8,28 @@
     align-items: flex-start;   
   }
 
-  &__header {
-    // width: 70%;
-    font-size: 18px;
-    line-height: 24px;
-    font-weight: 700;
-    color: #333;
+  &__header {    
     margin-bottom: 11px;
     margin-left: auto;
     margin-right: auto;   
+    line-height: calc(24 / 18);
+    font-size: 18px;
+    font-weight: 700;
+    color: $default-heading;
 
     @media (min-width: 1200px) {
-      font-size: 22px;
-      line-height: 28px;
       margin-bottom: 16px;
+      font-size: 22px;
+      line-height: calc(28 / 22);
     }
   }
 
-  &__text {
-    // max-width: 95%;
+  &__descr {    
     margin-left: auto;
     margin-right: auto;
+    line-height: calc(24 / 14);    
     font-size: 14px;
-    line-height: 24px;
-    // letter-spacing: -0.018em;
-    color: #777;
+    color: $default-color-text-14px;
 
     @media (min-width: 768px) {
       width: 80%;
