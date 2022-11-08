@@ -1,6 +1,19 @@
 .service-description {  
   &__img {
     
+    &--tablet {
+      margin-bottom: 12px; 
+      
+      @media (min-width: 768px) {
+        margin-bottom: 0;
+      }
+
+      @media (min-width: 1200px) {      
+        position: absolute;
+        left: -32px;
+      }      
+    }
+    
     &--rocket {    
       margin-bottom: 32px;
 
@@ -15,18 +28,6 @@
       }
     }
 
-    &--tablet {
-      margin-bottom: 12px; 
-      
-      @media (min-width: 768px) {
-        margin-bottom: 0;
-      }
-
-      @media (min-width: 1200px) {      
-        position: absolute;
-        left: -32px;
-      }      
-    }
   }
 
   &__text {

@@ -18,8 +18,8 @@
   }
 
   &__subtitle {
-    margin: 10px 10px 37px;
-    line-height: 24px;
+    margin: 10px 0px 37px;
+    line-height: calc(24 / 14);
     font-size: 14px;
     color: #777;
 
