@@ -35,5 +35,14 @@
       margin-bottom: 60px;
       padding-left: 0px;
     }    
-  }
+  } 
+  
+  @media (min-width: 768px) {
+    &__row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  
+    &__col {display: flex;}
+  }  
 }

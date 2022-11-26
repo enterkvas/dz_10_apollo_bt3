@@ -59,10 +59,21 @@
     background-image: url("../img/icons/arrow-orange.png");
     background-repeat: no-repeat;
     background-position: left top;
+    transition: all 1s ease 0s;
+
+    &:hover {background-color: #F08080;}   
 
     @media (min-width: 768px) {
       margin-top: 23px;
       margin-bottom: 0px;
+    }
+
+    @media (min-width: 992px) {
+      &:focus-visible {
+      outline: 4px solid #000;
+      outline-offset: 10px;
+      background-color: $default-color-links-footer;
+      }
     }
 
     @media (min-width: 1200px) {      

@@ -35,7 +35,7 @@
 
 /* If PaginationNumbers is true */
 
-.top-slider-theme .owl-controls .owl-page span.owl-numbers {
+.top-slider-theme .owl-controls .owl-page span.owl-numbers { 
   height: auto;
   width: auto;
   color: #fff;
@@ -51,7 +51,7 @@
 .top-slider-theme .owl-controls .owl-buttons div {
   display: none;
 
-  @media (min-width: 768px) {
+  @media (min-width: 768px) {    
     display: block;
     position: absolute;
     width: 72px;
@@ -65,20 +65,22 @@
 
 .owl-prev {
   left: 20px;
-  background-image: url("../img/icons/arrow-left.png");
-
-  @media (min-width: 992px) {
-    left: 25px;
-  }
+  background-image: url("../img/icons/arrow-left.png");  
 }
 
 .owl-next {
   right: 20px;
-  background-image: url("../img/icons/arrow-right.png");
-  
-  @media (min-width: 992px) {
-    right: 25px;
-  }
+  background-image: url("../img/icons/arrow-right.png");   
+}
+
+@media (min-width: 992px) {
+  .owl-prev {left: 0;}
+  .owl-next {right: 0;}
+}
+
+@media (min-width: 1200px) {
+  .owl-prev {left: 100px;}
+  .owl-next {right: 100px;}
 }
 
 .owl-pagination {  

@@ -18,7 +18,12 @@
 	width: 100%;
 	-ms-touch-action: pan-y;
   touch-action: pan-y;
+
+  @media (min-width: 992px) {
+    & {position: relative;}    
+  }  
 }
+
 .top-slider .owl-wrapper{
 	display: none;
 	position: relative;
@@ -41,9 +46,10 @@
 .top-slider .owl-item{
 	float: left;
 }
+
 .owl-controls .owl-page,
 .owl-controls .owl-buttons div{
-	cursor: pointer;
+	cursor: pointer; 
 }
 .owl-controls {
 	-webkit-user-select: none;
