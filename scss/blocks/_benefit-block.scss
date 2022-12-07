@@ -31,14 +31,8 @@
     font-size: 14px;
     color: $default-color-text-14px;
 
-    @media (min-width: 768px) {
-      width: 80%;
-    }
-    @media (min-width: 992px) {
-      width: 60%;
-    }
-    @media (min-width: 1200px) {
-      width: 100%;
-    }
+    @media (min-width: 768px) {width: 80%;}
+    @media (min-width: 992px) {width: 60%;}
+    @media (min-width: 1200px) {width: 100%;}
   }
 }

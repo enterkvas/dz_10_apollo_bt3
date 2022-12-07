@@ -44,9 +44,7 @@
   background-color: transparent;  
   transition: all .3s ease 0s;
   
-  @media (min-width: 992px) {
-    & {bottom: -100%;}
-  }
+  @media (min-width: 992px) {bottom: -100%;}
 
   &:after {
     content: "";
@@ -66,9 +64,7 @@
   &.active {
     bottom: 20px;
 
-    @media (min-width: 768px) {
-      bottom: 40px;
-    }
+    @media (min-width: 768px) {bottom: 40px;}
     @media (min-width: 992px) {
       bottom: 50px;
       right: 50px;

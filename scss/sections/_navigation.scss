@@ -14,9 +14,7 @@
   top: 0;
   width: 100%;
 
-  @media (min-width: 992px) {
-    position: relative;    
-  }
+  @media (min-width: 992px) {position: relative;}
 
   &__toggle-button {
     padding-top: 21px;
@@ -24,13 +22,9 @@
     padding-left: 15px;
     cursor: pointer;
 
-    @media (min-width: 768px) {
-      padding-left: 20px;
-    }
+    @media (min-width: 768px) {padding-left: 20px;}
 
-    &--active {
-      background-color: #16385f;
-    }
+    &--active {background-color: #16385f;}
 
     &:before {
       content: '';
@@ -43,20 +37,14 @@
       background-repeat: no-repeat;
       background-position: 0 0;
 
-      @media (min-width: 768px) {
-        right: 20px;
-      }
+      @media (min-width: 768px) {right: 20px;}
     }
-    @media (min-width: 992px) {
-      display: none;
-    }
+    @media (min-width: 992px) {display: none;}
   }
   &__body {
     position: fixed;
     width: 100%;
 
-    @media (min-width: 992px) {
-      position: static;
-    }
+    @media (min-width: 992px) {position: static;}
   }  
 }

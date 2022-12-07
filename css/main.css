@@ -48,17 +48,6 @@ ul, ol, li {
 }
 
 /*
- * Box-sizing-model
-*/
-*,
-*:before,
-*:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-/*
  * Responsive images
 */
 img {
@@ -71,18 +60,6 @@ img {
 */
 input[type=submit] {
   cursor: pointer;
-}
-
-/*
- * A better looking default horizontal rule
-*/
-hr {
-  display: block;
-  height: 1px;
-  padding: 0;
-  margin: 1em 0;
-  border: 0;
-  border-top: 1px solid #ccc;
 }
 
 /*
@@ -168,7 +145,7 @@ body {
 }
 
 html {
-  font-size: 10px;
+  font-size: 62.5%; /* 10px */
   line-height: 1.4;
 }
 
@@ -244,6 +221,7 @@ p {
 @media (min-width: 992px) {
   .menu__list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     background-color: transparent;
   }
@@ -965,7 +943,7 @@ p {
   }
 }
 @media (min-width: 768px) {
-  .prices__row {
+  .prices__packages {
     display: flex;
     flex-wrap: wrap;
   }

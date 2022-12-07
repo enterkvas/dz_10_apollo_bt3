@@ -2,15 +2,7 @@
   padding: 40px 0 50px;
   border-bottom: 1px solid #eaeff5;
 
-  @media (min-width: 768px) {
-    padding-top: 80px;
-  }
-
-  @media (min-width: 992px) {
-    padding-bottom: 30px;
-  }
-
-  @media (min-width: 1200px) {
-    padding: 70px 0 80px;    
-  }
+  @media (min-width: 768px) {padding-top: 80px;}
+  @media (min-width: 992px) {padding-bottom: 30px;}
+  @media (min-width: 1200px) {padding: 70px 0 80px;}
 }
