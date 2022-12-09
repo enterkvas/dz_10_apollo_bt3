@@ -1,5 +1,5 @@
 .logo {  
-  padding-top: 96px;
+  padding-top: 101px;
   padding-bottom: 38px;
   text-align: center;
   text-transform: uppercase;
@@ -10,8 +10,8 @@
   }
 
   @media (min-width: 992px) {
-    padding-top: 30px;
-    padding-bottom: 35px;
+    padding-top: 53px;
+    padding-bottom: 48px;
   }
 
   @media (min-width: 1200px) {
@@ -19,25 +19,23 @@
     padding-bottom: 50px;
   }
 
-  &__name {
-    padding-left: 0.1em;
-    margin-bottom: 0.19em;
+  &__name {    
+    margin-bottom: 0.2em;
     line-height: 1;
     font-weight: 700;    
     font-size: 33px;
-    letter-spacing: 0.21em;
+    letter-spacing: 0.27em;
     color: #000;
 
     @media (min-width: 768px) {
       padding-left: 0;
       margin-top: 0;
       margin-bottom: 0.25em;
-      letter-spacing: 0.25em;
+      letter-spacing: 0.3em;
     }
 
     @media (min-width: 992px) {
-      font-size: 38px;
-      letter-spacing: 0.25em;
+      font-size: 38px;     
     }
     @media (min-width: 1200px) {
       margin-bottom: 10px;      
@@ -46,12 +44,11 @@
     }
   }
 
-  &__slogan {
-    padding-left: 0.25em;
+  &__slogan {    
     line-height: 1;
     font-size: 14px;
     font-weight: 700;
-    letter-spacing: 0.69em;
+    letter-spacing: 0.71em;
     color: #a1bbd9;
 
     @media (min-width: 768px) {

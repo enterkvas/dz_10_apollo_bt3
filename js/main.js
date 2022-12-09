@@ -12,12 +12,9 @@ $(document).ready(function () {
     e.preventDefault();
     // Open/hide the menu
     menu.slideToggle();
-    // Add the modifier --active (Adds/
-    // Removes a dark blue menu button color)
-    $(this).toggleClass('navigation__toggle-button--active');
-    // $(this).addClass('slider--without-shadow');
-    // Returns to the beginning of the page when pressed on a burger
-    // if you were not at the beginning of the page:	
+    // Add the modifier --active
+    // Removes a dark blue menu button color
+    $(this).toggleClass('navigation__toggle-button--active');    	
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
   // When the window size changes in the larger direction, if the menu was hidden, show it
@@ -71,6 +68,7 @@ $(document).ready(function () {
     navigationText: ['', ''],
     slideSpeed: 600
   });
+  
   // Button up (.btn-up)
   $('body').append("<button class='btn-up'>");
   $('.btn-up').on('click', function () {

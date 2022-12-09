@@ -2,7 +2,6 @@
 @import "base/_null-styles";
 @import "base/_variables";
 @import "base/_utils";
-@import "base/_gridLayout";
 // General
 @import "base/_base";
 // Blocks
@@ -23,3 +22,5 @@
 @import "sections/_footer";
 @import "sections/_freelance";
 @import "sections/_startup";
+
+@import "base/_gridLayout";
