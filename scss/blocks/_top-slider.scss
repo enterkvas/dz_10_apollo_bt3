@@ -35,13 +35,6 @@
 	position: relative;
 	width: 100%;
 }
-.top-slider .owl-wrapper-outer.autoHeight{
-	-webkit-transition: height 500ms ease-in-out;
-	-moz-transition: height 500ms ease-in-out;
-	-ms-transition: height 500ms ease-in-out;
-	-o-transition: height 500ms ease-in-out;
-	transition: height 500ms ease-in-out;
-}
 	
 .top-slider .owl-item{
 	float: left;
@@ -59,9 +52,6 @@
 	user-select: none;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-
-/* mouse grab icon */
-.grabbing {cursor:url(grabbing.png) 8 8, move;}
 
 /* fix */
 .top-slider  .owl-wrapper,
