@@ -30,22 +30,18 @@ ul, ol, li {
   list-style: none;
 }
 
-/*
- * Responsive images
-*/
 img {
   max-width: 100%;
   height: auto;
 }
 
-html,
-body {
+html, body {
   height: 100%;
   min-width: 320px;
 }
 
 html {
-  font-size: 62.5%; /* 10px */
+  font-size: 62.5%;
   line-height: 1.4;
 }
 
@@ -53,7 +49,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  font-size: 1.6rem; /* 10px * 1.6 = 16px */
+  font-size: 1.6rem;
   font-family: "Noto Sans";
 }
 
@@ -623,6 +619,7 @@ p {
   width: 40px;
   height: 40px;
   margin-top: 20px;
+  border-radius: 30px;
   background-image: url("../img/icons/arrow-orange.png");
   background-repeat: no-repeat;
   background-position: left top;
@@ -630,6 +627,9 @@ p {
 }
 .service-description__button-arrow:hover {
   background-color: #F08080;
+}
+.service-description__button-arrow--red:hover {
+  background-color: #D34B15;
 }
 @media (min-width: 768px) {
   .service-description__button-arrow {
@@ -1116,4 +1116,4 @@ p {
   .mb5 {
     margin-bottom: 5px;
   }
-}/*# sourceMappingURL=main.css.map */
+}
